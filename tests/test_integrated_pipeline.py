@@ -20,7 +20,7 @@ class TestIntegratedPipeline:
         expected_annotators = [
             'ClinicalSentenceSegmenter',
             'ClinicalTokenizer', 
-            'ClinicalSectionDetector',
+            'ClinicalSectionAnnotator',
             'ClinicalNERAnnotator',
             'NegationAssertionAnnotator',
             'UMLSConceptMapper'

@@ -2,7 +2,7 @@
 
 from .base import Annotator
 from .tokenization import ClinicalSentenceSegmenter, ClinicalTokenizer
-from .sections import ClinicalSectionDetector
+from .sections import ClinicalSectionAnnotator
 from .ner import ClinicalNERAnnotator, SimpleClinicalNER
 from .assertion import NegationAssertionAnnotator
 from .umls import UMLSConceptMapper, SimpleDictionaryMapper
@@ -11,7 +11,7 @@ __all__ = [
     "Annotator",
     "ClinicalSentenceSegmenter", 
     "ClinicalTokenizer",
-    "ClinicalSectionDetector",
+    "ClinicalSectionAnnotator",
     "ClinicalNERAnnotator",
     "SimpleClinicalNER", 
     "NegationAssertionAnnotator",
