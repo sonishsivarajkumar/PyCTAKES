@@ -1,28 +1,56 @@
-# 🚀 PyTAKES PyPI Publishing Guide
+# 🚀 PyCTAKES PyPI Publishing Guide
 
-## Prerequisites
+## ✅ Package Ready for Upload!
 
-✅ **Already Completed:**
-- Project structure is ready
-- `pyproject.toml` is configured
-- Apache 2.0 License is in place
-- README.md exists
-- Source code is in `src/pytakes/`
+Your package has been successfully built and validated:
+- `pyctakes-1.0.0-py3-none-any.whl` ✅
+- `pyctakes-1.0.0.tar.gz` ✅
 
-## Step 1: Create PyPI Account
+## Quick Upload Instructions
 
-1. **Create accounts on both:**
-   - **TestPyPI (for testing)**: https://test.pypi.org/account/register/
-   - **PyPI (production)**: https://pypi.org/account/register/
+### 1. Register PyPI Account (if needed)
+- Go to: https://pypi.org/account/register/
+- **Username**: sonish  
+- **Email**: sonish.sivarajkumar@gmail.com
+- **Enable 2FA** (required for publishing)
 
-2. **Enable 2FA** on both accounts (required for publishing)
+### 2. Upload to PyPI
 
-3. **Create API tokens:**
-   - Go to Account Settings → API tokens
-   - Create a token for each platform
-   - Save these tokens securely!
+**Method 1: Direct Upload (Easiest)**
+```bash
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload dist/*
+```
+- Enter username: `sonish`
+- Enter password: (your PyPI password)
 
-## Step 2: Configure Authentication
+**Method 2: Using API Token (Recommended)**
+1. Create API token at https://pypi.org/manage/account/token/
+2. Upload with token:
+```bash
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload dist/* -u __token__ -p pypi-your-token-here
+```
+
+### 3. Test Upload First (Recommended)
+
+**Upload to TestPyPI first:**
+```bash
+# Register at https://test.pypi.org/account/register/
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload --repository testpypi dist/*
+```
+
+**Test installation:**
+```bash
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pyctakes
+```
+
+### 4. Verify Success
+
+After upload, your package will be available at:
+- **PyPI URL**: https://pypi.org/project/pyctakes/
+- **Install command**: `pip install pyctakes`
+- **Import**: `import pyctakes`
+
+## Alternative: Configure .pypirc (Optional)
 
 Create a `~/.pypirc` file with your credentials:
 
@@ -52,25 +80,25 @@ Run these commands in your project directory:
 rm -rf dist/ build/ *.egg-info/
 
 # Build the package
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m build
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m build
 ```
 
 This creates:
-- `dist/pytakes-1.0.0.tar.gz` (source distribution)
-- `dist/pytakes-1.0.0-py3-none-any.whl` (wheel distribution)
+- `dist/pyctakes-1.0.0.tar.gz` (source distribution)
+- `dist/pyctakes-1.0.0-py3-none-any.whl` (wheel distribution)
 
 ## Step 4: Test Upload to TestPyPI
 
 ```bash
 # Upload to TestPyPI first
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload --repository testpypi dist/*
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload --repository testpypi dist/*
 ```
 
 ## Step 5: Test Installation from TestPyPI
 
 ```bash
 # Test install from TestPyPI
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pytakes
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pyctakes
 ```
 
 ## Step 6: Upload to Production PyPI
@@ -79,7 +107,7 @@ Once testing is successful:
 
 ```bash
 # Upload to production PyPI
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload dist/*
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload dist/*
 ```
 
 ## Step 7: Verify Publication
@@ -88,10 +116,10 @@ After successful upload:
 
 ```bash
 # Install from PyPI
-pip install pytakes
+pip install pyctakes
 
 # Test the installation
-python -c "import pytakes; print(pytakes.__version__)"
+python -c "import pyctakes; print(pyctakes.__version__)"
 ```
 
 ## Step 8: Create GitHub Release
@@ -99,7 +127,7 @@ python -c "import pytakes; print(pytakes.__version__)"
 1. Go to your GitHub repository
 2. Click "Releases" → "Create a new release"
 3. Tag: `v1.0.0`
-4. Title: `PyTAKES v1.0.0 - Initial Release`
+4. Title: `pyctakes v1.0.0 - Initial Release`
 5. Description: Copy from your README or ANNOUNCEMENT.md
 6. Attach the built distributions (`dist/` files)
 
@@ -136,13 +164,13 @@ You can set up GitHub Actions for automatic publishing:
 
 ```bash
 # Check package info
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine check dist/*
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine check dist/*
 
 # Upload with verbose output
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload --verbose dist/*
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload --verbose dist/*
 
 # Upload specific file
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload dist/pytakes-1.0.0-py3-none-any.whl
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload dist/pyctakes-1.0.0-py3-none-any.whl
 ```
 
 ## Final Checklist
@@ -165,6 +193,6 @@ You can set up GitHub Actions for automatic publishing:
 - **Production upload**: 2-3 minutes
 - **Total**: ~20-30 minutes
 
-Once uploaded, your package will be available at: **https://pypi.org/project/pytakes/**
+Once uploaded, your package will be available at: **https://pypi.org/project/pyctakes/**
 
-Users can then install it with: `pip install pytakes`
+Users can then install it with: `pip install pyctakes`

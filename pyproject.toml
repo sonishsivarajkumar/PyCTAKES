@@ -3,23 +3,22 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pytakes"
+name = "pyctakes"
 version = "1.0.0"
 description = "Python-native clinical NLP framework mirroring Apache cTAKES functionality"
 readme = "README.md"
 license = "Apache-2.0"
 authors = [
-    {name = "Sonish Sivarajkumar", email = "sonish@example.com"}
+    {name = "Sonish Sivarajkumar", email = "sonish.sivarajkumar@gmail.com"}
 ]
 maintainers = [
-    {name = "Sonish Sivarajkumar", email = "sonish@example.com"}
+    {name = "Sonish Sivarajkumar", email = "sonish.sivarajkumar@gmail.com"}
 ]
 keywords = ["nlp", "clinical", "medical", "ctakes", "umls", "healthcare"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Healthcare Industry",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -71,7 +70,7 @@ dask = [
     "dask[complete]>=2022.0.0",
 ]
 all = [
-    "pytakes[dev,docs,dask]",
+    "pyctakes[dev,docs,dask]",
 ]
 
 [project.urls]
@@ -81,9 +80,9 @@ Repository = "https://github.com/sonishsivarajkumar/PyCTAKES.git"
 "Bug Tracker" = "https://github.com/sonishsivarajkumar/PyCTAKES/issues"
 
 [project.scripts]
-pytakes = "pytakes.cli:main"
+pyctakes = "pyctakes.cli:main"
 
-[project.entry-points."pytakes.annotators"]
+[project.entry-points."pyctakes.annotators"]
 # Plugin discovery for custom annotators
 
 [tool.setuptools.packages.find]
@@ -112,11 +111,11 @@ check_untyped_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=pytakes --cov-report=html --cov-report=term-missing"
+addopts = "--cov=pyctakes --cov-report=html --cov-report=term-missing"
 asyncio_mode = "auto"
 
 [tool.coverage.run]
-source = ["src/pytakes"]
+source = ["src/pyctakes"]
 omit = ["*/tests/*"]
 
 [tool.coverage.report]
