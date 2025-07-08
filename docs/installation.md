@@ -2,7 +2,7 @@
 
 ## Requirements
 
-PyTAKES requires Python 3.8 or higher and is tested on:
+PyCTAKES requires Python 3.8 or higher and is tested on:
 
 - Python 3.8, 3.9, 3.10, 3.11, 3.12
 - Linux, macOS, and Windows
@@ -12,22 +12,22 @@ PyTAKES requires Python 3.8 or higher and is tested on:
 ### Install from PyPI (Recommended)
 
 ```bash
-pip install pytakes
+pip install pyctakes
 ```
 
-This installs PyTAKES with basic dependencies for rule-based processing.
+This installs PyCTAKES with basic dependencies for rule-based processing.
 
 ### Development Installation
 
 For the latest development version:
 
 ```bash
-pip install git+https://github.com/sonish777/pytakes.git
+pip install git+https://github.com/sonish777/pyctakes.git
 ```
 
 ## Optional Dependencies
 
-PyTAKES supports multiple NLP backends. Install additional packages for enhanced functionality:
+PyCTAKES supports multiple NLP backends. Install additional packages for enhanced functionality:
 
 ### spaCy (Recommended)
 
@@ -68,10 +68,10 @@ For all features:
 
 ```bash
 # Install with all optional dependencies
-pip install pytakes[all]
+pip install pyctakes[all]
 
 # Or install components separately
-pip install pytakes spacy scispacy stanza
+pip install pyctakes spacy scispacy stanza
 python -m spacy download en_core_web_sm
 python -m spacy download en_core_sci_sm
 ```
@@ -81,28 +81,28 @@ python -m spacy download en_core_sci_sm
 Verify your installation:
 
 ```python
-import pytakes
+import pyctakes
 
 # Test basic functionality
-pipeline = pytakes.create_basic_pipeline()
+pipeline = pyctakes.create_basic_pipeline()
 result = pipeline.process_text("Patient has diabetes.")
 print(f"Found {len(result.document.annotations)} annotations")
 ```
 
 ## Docker Installation
 
-Run PyTAKES in Docker:
+Run PyCTAKES in Docker:
 
 ```bash
 # Pull the image
-docker pull sonish777/pytakes:latest
+docker pull sonish777/pyctakes:latest
 
 # Run interactively
-docker run -it sonish777/pytakes:latest python
+docker run -it sonish777/pyctakes:latest python
 
 # Process a file
-docker run -v $(pwd):/data sonish777/pytakes:latest \
-  pytakes annotate /data/clinical_note.txt
+docker run -v $(pwd):/data sonish777/pyctakes:latest \
+  pyctakes annotate /data/clinical_note.txt
 ```
 
 ## Troubleshooting
@@ -116,16 +116,16 @@ python -m spacy download en_core_web_sm
 
 **2. Permission errors**
 ```bash
-pip install --user pytakes
+pip install --user pyctakes
 ```
 
 **3. Environment conflicts**
 ```bash
 # Use virtual environment
-python -m venv pytakes_env
-source pytakes_env/bin/activate  # Linux/Mac
-# or pytakes_env\Scripts\activate  # Windows
-pip install pytakes
+python -m venv pyctakes_env
+source pyctakes_env/bin/activate  # Linux/Mac
+# or pyctakes_env\Scripts\activate  # Windows
+pip install pyctakes
 ```
 
 ### Platform-Specific Notes
@@ -133,20 +133,20 @@ pip install pytakes
 **macOS Apple Silicon (M1/M2)**
 ```bash
 # Install with conda for better compatibility
-conda install pytakes -c conda-forge
+conda install pyctakes -c conda-forge
 ```
 
 **Windows**
 ```bash
 # Use conda on Windows for easier dependency management
-conda install pytakes -c conda-forge
+conda install pyctakes -c conda-forge
 ```
 
 **Linux**
 ```bash
 # May need additional system dependencies
 sudo apt-get install python3-dev build-essential
-pip install pytakes
+pip install pyctakes
 ```
 
 ## Performance Optimization

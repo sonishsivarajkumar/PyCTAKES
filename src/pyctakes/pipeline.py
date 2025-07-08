@@ -1,4 +1,4 @@
-"""Core PyTAKES pipeline implementation."""
+"""Core PyCTAKES pipeline implementation."""
 
 import time
 from typing import Any, Dict, List, Optional, Union
@@ -9,7 +9,7 @@ from .types import Document, ProcessingResult
 
 class Pipeline:
     """
-    Main PyTAKES processing pipeline.
+    Main PyCTAKES processing pipeline.
     
     The pipeline orchestrates multiple annotators to process clinical text
     from raw input through tokenization, NER, concept mapping, and relation extraction.

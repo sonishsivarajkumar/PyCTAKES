@@ -1,16 +1,16 @@
 # Examples
 
-This page provides comprehensive examples of using PyTAKES for various clinical NLP tasks.
+This page provides comprehensive examples of using PyCTAKES for various clinical NLP tasks.
 
 ## Basic Examples
 
 ### Simple Entity Extraction
 
 ```python
-import pytakes
+import pyctakes
 
 # Create a basic pipeline
-pipeline = pytakes.create_basic_pipeline()
+pipeline = pyctakes.create_basic_pipeline()
 
 # Process clinical text
 text = "Patient has diabetes and takes metformin 500mg twice daily."
@@ -31,11 +31,11 @@ metformin (medication)
 ### Processing with Negation Detection
 
 ```python
-import pytakes
-from pytakes.types import AnnotationType
+import pyctakes
+from pyctakes.types import AnnotationType
 
 # Use default pipeline with assertion detection
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 
 text = """
 Patient denies chest pain and shortness of breath.
@@ -66,8 +66,8 @@ aspirin              | medication   | PRESENT
 ### Complete Clinical Note
 
 ```python
-import pytakes
-from pytakes.types import AnnotationType
+import pyctakes
+from pyctakes.types import AnnotationType
 
 # Sample clinical note
 clinical_note = """
@@ -87,7 +87,7 @@ Likely angina. Continue current medications.
 """
 
 # Process with default pipeline
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 result = pipeline.process_text(clinical_note, doc_id="note_001")
 
 print(f"Document: {result.document.doc_id}")
@@ -113,13 +113,13 @@ for section in sections:
 ### Medication Extraction
 
 ```python
-import pytakes
-from pytakes.types import EntityType, AnnotationType
+import pyctakes
+from pyctakes.types import EntityType, AnnotationType
 
 def extract_medications(text):
     """Extract medications with dosages and frequencies."""
     
-    pipeline = pytakes.create_default_pipeline()
+    pipeline = pyctakes.create_default_pipeline()
     result = pipeline.process_text(text)
     
     entities = result.document.get_annotations(AnnotationType.NAMED_ENTITY)
@@ -149,8 +149,8 @@ for med in medications:
 ### Custom Pipeline Configuration
 
 ```python
-import pytakes
-from pytakes.annotators import (
+import pyctakes
+from pyctakes.annotators import (
     ClinicalTokenizer, 
     ClinicalNERAnnotator, 
     NegationAssertionAnnotator
@@ -181,7 +181,7 @@ config = {
 }
 
 # Build custom pipeline
-from pytakes import Pipeline
+from pyctakes import Pipeline
 
 pipeline = Pipeline()
 pipeline.add_annotator(ClinicalTokenizer(config.get("tokenizer", {})))
@@ -201,7 +201,7 @@ for entity in entities:
 ### Batch Processing
 
 ```python
-import pytakes
+import pyctakes
 from pathlib import Path
 import json
 
@@ -209,7 +209,7 @@ def process_clinical_notes_batch(notes_directory, output_directory):
     """Process multiple clinical notes and save results."""
     
     # Create pipeline once for efficiency
-    pipeline = pytakes.create_default_pipeline()
+    pipeline = pyctakes.create_default_pipeline()
     
     notes_dir = Path(notes_directory)
     output_dir = Path(output_directory)
@@ -281,16 +281,16 @@ def process_clinical_notes_batch(notes_directory, output_directory):
 ### Performance Comparison
 
 ```python
-import pytakes
+import pyctakes
 import time
 
 def compare_pipeline_performance(text):
     """Compare performance of different pipeline types."""
     
     pipelines = {
-        "Basic": pytakes.create_basic_pipeline(),
-        "Fast": pytakes.create_fast_pipeline(),
-        "Default": pytakes.create_default_pipeline()
+        "Basic": pyctakes.create_basic_pipeline(),
+        "Fast": pyctakes.create_fast_pipeline(),
+        "Default": pyctakes.create_default_pipeline()
     }
     
     results = {}
@@ -339,13 +339,13 @@ for name, stats in performance.items():
 ### Phenotyping Example
 
 ```python
-import pytakes
+import pyctakes
 from collections import defaultdict
 
 def phenotype_patients(clinical_notes):
     """Identify patients with specific conditions."""
     
-    pipeline = pytakes.create_default_pipeline()
+    pipeline = pyctakes.create_default_pipeline()
     
     # Define phenotype criteria
     diabetes_terms = {"diabetes", "diabetes mellitus", "dm", "diabetic"}
@@ -394,13 +394,13 @@ for patient_id, conditions in phenotypes.items():
 ### Quality Metrics Extraction
 
 ```python
-import pytakes
+import pyctakes
 import re
 
 def extract_quality_metrics(clinical_text):
     """Extract quality metrics from clinical notes."""
     
-    pipeline = pytakes.create_default_pipeline()
+    pipeline = pyctakes.create_default_pipeline()
     result = pipeline.process_text(clinical_text)
     
     metrics = {}
@@ -467,7 +467,7 @@ for key, value in metrics.items():
 echo "Patient has diabetes and takes metformin 500mg twice daily." > sample.txt
 
 # Annotate with default pipeline
-pytakes annotate sample.txt --output annotations.json
+pyctakes annotate sample.txt --output annotations.json
 
 # View results
 cat annotations.json
@@ -477,13 +477,13 @@ cat annotations.json
 
 ```bash
 # Fast pipeline for quick processing
-pytakes annotate sample.txt --pipeline fast --format text
+pyctakes annotate sample.txt --pipeline fast --format text
 
 # Basic pipeline
-pytakes annotate sample.txt --pipeline basic --output basic_results.json
+pyctakes annotate sample.txt --pipeline basic --output basic_results.json
 
 # With custom configuration
-pytakes annotate sample.txt --config config.json --output configured_results.json
+pyctakes annotate sample.txt --config config.json --output configured_results.json
 ```
 
 ### Batch Processing
@@ -499,7 +499,7 @@ echo "67-year-old with hypertension." > clinical_notes/note2.txt
 # Process all files
 for file in clinical_notes/*.txt; do
     basename=$(basename "$file" .txt)
-    pytakes annotate "$file" --output "annotations/${basename}_annotations.json"
+    pyctakes annotate "$file" --output "annotations/${basename}_annotations.json"
 done
 ```
 
@@ -509,12 +509,12 @@ done
 
 ```python
 from flask import Flask, request, jsonify
-import pytakes
+import pyctakes
 
 app = Flask(__name__)
 
 # Initialize pipeline once
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 
 @app.route('/annotate', methods=['POST'])
 def annotate_text():
@@ -563,12 +563,12 @@ if __name__ == '__main__':
 
 ```python
 import pandas as pd
-import pytakes
+import pyctakes
 
 def annotate_dataframe(df, text_column='clinical_text', id_column='patient_id'):
     """Annotate clinical text in a pandas DataFrame."""
     
-    pipeline = pytakes.create_default_pipeline()
+    pipeline = pyctakes.create_default_pipeline()
     
     results = []
     
@@ -608,4 +608,4 @@ annotations_df = annotate_dataframe(clinical_df)
 print(annotations_df)
 ```
 
-These examples demonstrate the versatility and power of PyTAKES for various clinical NLP tasks. Start with the basic examples and gradually work your way up to more complex use cases.
+These examples demonstrate the versatility and power of PyCTAKES for various clinical NLP tasks. Start with the basic examples and gradually work your way up to more complex use cases.

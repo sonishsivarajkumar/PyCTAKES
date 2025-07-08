@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.abspath('../../src'))
 
 # Project information
-project = 'PyTAKES'
+project = 'PyCTAKES'
 copyright = '2025, Sonish Sivarajkumar'
 author = 'Sonish Sivarajkumar'
 release = '0.1.0'

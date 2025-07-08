@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Quick verification script for PyTAKES v1.0 features."""
+"""Quick verification script for PyCTAKES v1.0 features."""
 
 import sys
-import pytakes
-from pytakes.types import AnnotationType
+import pyctakes
+from pyctakes.types import AnnotationType
 
 def test_basic_functionality():
     """Test basic functionality."""
-    print("🧪 Testing PyTAKES v1.0 Implementation...")
+    print("🧪 Testing PyCTAKES v1.0 Implementation...")
     
     # Test text
     clinical_text = """
@@ -18,7 +18,7 @@ def test_basic_functionality():
     
     # Test 1: Basic Pipeline
     print("\n1️⃣ Testing Basic Pipeline...")
-    pipeline = pytakes.create_basic_pipeline()
+    pipeline = pyctakes.create_basic_pipeline()
     result = pipeline.process_text(clinical_text, doc_id="test_1")
     
     sentences = result.document.get_annotations(AnnotationType.SENTENCE)
@@ -38,7 +38,7 @@ def test_basic_functionality():
     
     # Test 2: Fast Pipeline
     print("\n2️⃣ Testing Fast Pipeline...")
-    fast_pipeline = pytakes.create_fast_pipeline()
+    fast_pipeline = pyctakes.create_fast_pipeline()
     fast_result = fast_pipeline.process_text(clinical_text, doc_id="test_2")
     
     fast_entities = fast_result.document.get_annotations(AnnotationType.NAMED_ENTITY)
@@ -47,8 +47,8 @@ def test_basic_functionality():
     
     # Test 3: Custom Pipeline
     print("\n3️⃣ Testing Custom Pipeline...")
-    from pytakes import Pipeline
-    from pytakes.annotators import ClinicalTokenizer, ClinicalNERAnnotator
+    from pyctakes import Pipeline
+    from pyctakes.annotators import ClinicalTokenizer, ClinicalNERAnnotator
     
     custom_pipeline = Pipeline()
     custom_pipeline.add_annotator(ClinicalTokenizer({"backend": "rule"}))
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     try:
         success = test_basic_functionality()
         if success:
-            print("\n✅ PyTAKES v1.0 implementation is working correctly!")
+            print("\n✅ PyCTAKES v1.0 implementation is working correctly!")
             sys.exit(0)
         else:
             print("\n❌ Some tests failed!")

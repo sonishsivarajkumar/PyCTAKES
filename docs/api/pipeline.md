@@ -1,6 +1,6 @@
 # Pipeline API Reference
 
-The PyTAKES pipeline module provides the core functionality for processing clinical text through configurable annotator chains.
+The PyCTAKES pipeline module provides the core functionality for processing clinical text through configurable annotator chains.
 
 ## Pipeline Class
 
@@ -69,7 +69,7 @@ Create minimal pipeline for simple entity extraction.
 ### Basic Pipeline Usage
 
 ```python
-from pytakes.pipeline import Pipeline, create_default_pipeline
+from pyctakes.pipeline import Pipeline, create_default_pipeline
 
 # Create pipeline
 pipeline = create_default_pipeline()
@@ -86,8 +86,8 @@ for entity in result.entities:
 ### Custom Pipeline
 
 ```python
-from pytakes.pipeline import Pipeline
-from pytakes.annotators import TokenizationAnnotator, NERAnnotator
+from pyctakes.pipeline import Pipeline
+from pyctakes.annotators import TokenizationAnnotator, NERAnnotator
 
 # Create custom pipeline
 pipeline = Pipeline()
@@ -101,7 +101,7 @@ doc = pipeline.process_text("Patient takes aspirin 81mg daily.")
 ### Pipeline Configuration
 
 ```python
-from pytakes.pipeline import Pipeline
+from pyctakes.pipeline import Pipeline
 
 # Load from configuration file
 pipeline = Pipeline.from_config("config.json")
@@ -117,7 +117,7 @@ pipeline = Pipeline.from_config(config)
 ### Batch Processing
 
 ```python
-from pytakes.pipeline import Pipeline
+from pyctakes.pipeline import Pipeline
 
 pipeline = create_default_pipeline()
 
@@ -140,11 +140,11 @@ for i, result in enumerate(results):
 Add an annotator to the pipeline.
 
 **Parameters:**
-- `annotator`: An instance of a PyTAKES annotator
+- `annotator`: An instance of a PyCTAKES annotator
 
 **Example:**
 ```python
-from pytakes.annotators import TokenizationAnnotator
+from pyctakes.annotators import TokenizationAnnotator
 
 pipeline = Pipeline()
 pipeline.add_annotator(TokenizationAnnotator())
@@ -240,7 +240,7 @@ pipeline = create_basic_pipeline()
 ## Error Handling
 
 ```python
-from pytakes.pipeline import Pipeline, PipelineError
+from pyctakes.pipeline import Pipeline, PipelineError
 
 try:
     pipeline = Pipeline.from_config("invalid_config.json")

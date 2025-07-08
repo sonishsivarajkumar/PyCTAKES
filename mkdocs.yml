@@ -1,10 +1,10 @@
-site_name: PyTAKES Documentation
+site_name: PyCTAKES Documentation
 site_description: Python-native clinical NLP framework
 site_author: Sonish Sivarajkumar
-site_url: https://sonishsivarajkumar.github.io/PyTAKES
+site_url: https://sonishsivarajkumar.github.io/PyCTAKES
 
-repo_name: sonishsivarajkumar/PyTAKES
-repo_url: https://github.com/sonishsivarajkumar/PyTAKES
+repo_name: sonishsivarajkumar/PyCTAKES
+repo_url: https://github.com/sonishsivarajkumar/PyCTAKES
 
 theme:
   name: material
@@ -90,8 +90,8 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sonishsivarajkumar/PyTAKES
+      link: https://github.com/sonishsivarajkumar/PyCTAKES
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/pytakes/
+      link: https://pypi.org/project/pyctakes/
 
 copyright: Copyright &copy; 2025 Sonish Sivarajkumar

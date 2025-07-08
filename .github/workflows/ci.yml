@@ -1,4 +1,4 @@
-name: PyTAKES CI/CD
+name: PyCTAKES CI/CD
 
 on:
   push:
@@ -43,11 +43,11 @@ jobs:
     
     - name: Type check with mypy
       run: |
-        mypy src/pytakes
+        mypy src/pyctakes
     
     - name: Test with pytest
       run: |
-        pytest tests/ -v --cov=pytakes --cov-report=xml
+        pytest tests/ -v --cov=pyctakes --cov-report=xml
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3

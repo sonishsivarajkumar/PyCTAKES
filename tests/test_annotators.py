@@ -1,8 +1,8 @@
 """Test the base annotator class."""
 
 import pytest
-from pytakes.annotators.base import Annotator
-from pytakes.types import Document, Annotation, Span, AnnotationType
+from pyctakes.annotators.base import Annotator
+from pyctakes.types import Document, Annotation, Span, AnnotationType
 
 
 class ConcreteAnnotator(Annotator):

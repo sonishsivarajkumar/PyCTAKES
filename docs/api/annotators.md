@@ -1,12 +1,12 @@
 # Annotators API Reference
 
-PyTAKES provides a comprehensive set of annotators for clinical natural language processing.
+PyCTAKES provides a comprehensive set of annotators for clinical natural language processing.
 
 ## Base Annotator
 
 ### `class BaseAnnotator`
 
-Abstract base class for all PyTAKES annotators.
+Abstract base class for all PyCTAKES annotators.
 
 **Methods:**
 - `__init__()`: Initialize annotator
@@ -142,7 +142,7 @@ Fast dictionary-based concept mapping.
 ### Tokenization
 
 ```python
-from pytakes.annotators.tokenization import TokenizationAnnotator
+from pyctakes.annotators.tokenization import TokenizationAnnotator
 
 # Create annotator
 annotator = TokenizationAnnotator(backend="spacy")
@@ -160,7 +160,7 @@ for sentence in doc.sentences:
 ### Named Entity Recognition
 
 ```python
-from pytakes.annotators.ner import ClinicalNERAnnotator
+from pyctakes.annotators.ner import ClinicalNERAnnotator
 
 # Rule-based NER
 ner = ClinicalNERAnnotator(approach="rule_based")
@@ -181,7 +181,7 @@ for entity in doc.entities:
 ### Assertion Detection
 
 ```python
-from pytakes.annotators.assertion import NegationAssertionAnnotator
+from pyctakes.annotators.assertion import NegationAssertionAnnotator
 
 # Create assertion annotator
 assertion = NegationAssertionAnnotator()
@@ -196,7 +196,7 @@ for entity in doc.entities:
 ### Section Detection
 
 ```python
-from pytakes.annotators.sections import ClinicalSectionAnnotator
+from pyctakes.annotators.sections import ClinicalSectionAnnotator
 
 # Create section annotator
 sections = ClinicalSectionAnnotator()
@@ -210,7 +210,7 @@ for section in doc.sections:
 ### UMLS Concept Mapping
 
 ```python
-from pytakes.annotators.umls import UMLSConceptMapper
+from pyctakes.annotators.umls import UMLSConceptMapper
 
 # Create UMLS mapper
 umls = UMLSConceptMapper()
@@ -228,8 +228,8 @@ for entity in doc.entities:
 ### Creating Custom Annotators
 
 ```python
-from pytakes.annotators.base import BaseAnnotator
-from pytakes.types import Document, Annotation
+from pyctakes.annotators.base import BaseAnnotator
+from pyctakes.types import Document, Annotation
 
 class CustomAnnotator(BaseAnnotator):
     def __init__(self, **kwargs):
@@ -255,7 +255,7 @@ class CustomAnnotator(BaseAnnotator):
 ### Using Custom Annotators
 
 ```python
-from pytakes.pipeline import Pipeline
+from pyctakes.pipeline import Pipeline
 
 # Create pipeline with custom annotator
 pipeline = Pipeline()
@@ -321,7 +321,7 @@ assertion = NegationAssertionAnnotator(
 ## Error Handling
 
 ```python
-from pytakes.annotators.base import AnnotationError
+from pyctakes.annotators.base import AnnotationError
 
 try:
     doc = annotator.process(doc)

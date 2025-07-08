@@ -1,6 +1,6 @@
-# Contributing to PyTAKES
+# Contributing to PyCTAKES
 
-We welcome contributions to PyTAKES! This document provides guidelines for contributing to the project.
+We welcome contributions to PyCTAKES! This document provides guidelines for contributing to the project.
 
 ## Code of Conduct
 
@@ -13,8 +13,8 @@ This project adheres to a code of conduct that we expect all contributors to fol
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/your-username/PyTAKES.git
-   cd PyTAKES
+   git clone https://github.com/your-username/PyCTAKES.git
+   cd PyCTAKES
    ```
 
 3. Create a virtual environment:
@@ -42,7 +42,7 @@ pytest
 
 Run tests with coverage:
 ```bash
-pytest --cov=pytakes --cov-report=html
+pytest --cov=pyctakes --cov-report=html
 ```
 
 ### Code Style
@@ -59,7 +59,7 @@ Run all checks:
 black src tests
 isort src tests
 flake8 src tests
-mypy src/pytakes
+mypy src/pyctakes
 ```
 
 ## How to Contribute
@@ -109,9 +109,9 @@ Feature requests are welcome! Please include:
 
 ### Writing Annotators
 
-PyTAKES is designed to be extensible through custom annotators. When contributing new annotators:
+PyCTAKES is designed to be extensible through custom annotators. When contributing new annotators:
 
-1. Inherit from `pytakes.annotators.base.Annotator`
+1. Inherit from `pyctakes.annotators.base.Annotator`
 2. Implement required methods (`initialize`, `annotate`)
 3. Add comprehensive tests
 4. Include example usage in docstrings
@@ -120,8 +120,8 @@ PyTAKES is designed to be extensible through custom annotators. When contributin
 
 Example:
 ```python
-from pytakes.annotators.base import Annotator
-from pytakes.types import Document, Annotation
+from pyctakes.annotators.base import Annotator
+from pyctakes.types import Document, Annotation
 
 class MyAnnotator(Annotator):
     def initialize(self):
@@ -191,4 +191,4 @@ Contributors are recognized in:
 - Release notes
 - Project documentation
 
-Thank you for contributing to PyTAKES!
+Thank you for contributing to PyCTAKES!

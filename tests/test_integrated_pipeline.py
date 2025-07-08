@@ -1,8 +1,8 @@
 """Test the integrated pipeline with all annotators."""
 
 import pytest
-from pytakes import Pipeline, create_default_pipeline, create_fast_pipeline, create_basic_pipeline
-from pytakes.types import Document, AnnotationType
+from pyctakes import Pipeline, create_default_pipeline, create_fast_pipeline, create_basic_pipeline
+from pyctakes.types import Document, AnnotationType
 
 
 class TestIntegratedPipeline:

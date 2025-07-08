@@ -1,4 +1,4 @@
-# PyTAKES Roadmap
+# PyCTAKES Roadmap
 
 ## Current Status (v1.0-beta) ✅
 
@@ -229,7 +229,7 @@
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to PyTAKES development.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to PyCTAKES development.
 
 ## Milestones
 

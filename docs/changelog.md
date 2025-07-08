@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to PyTAKES will be documented in this file.
+All notable changes to PyCTAKES will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -83,7 +83,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Version 1.0.0 - "Foundation Release"
 
-PyTAKES v1.0.0 represents the first stable release of our Python-native clinical NLP framework. This release delivers comprehensive feature parity with Apache cTAKES while providing modern Python APIs and superior usability.
+PyCTAKES v1.0.0 represents the first stable release of our Python-native clinical NLP framework. This release delivers comprehensive feature parity with Apache cTAKES while providing modern Python APIs and superior usability.
 
 **Key Highlights:**
 - 🏥 **Clinical-First Design**: Built specifically for clinical text processing with medical abbreviation awareness, section detection, and assertion analysis
@@ -93,7 +93,7 @@ PyTAKES v1.0.0 represents the first stable release of our Python-native clinical
 - 📖 **Complete Documentation**: Full user guides, API documentation, and practical examples
 
 **Migration from cTAKES:**
-PyTAKES provides a drop-in replacement for Apache cTAKES with simpler deployment (no Java required) and modern NLP backends. Existing cTAKES users can migrate their pipelines using our configuration system.
+PyCTAKES provides a drop-in replacement for Apache cTAKES with simpler deployment (no Java required) and modern NLP backends. Existing cTAKES users can migrate their pipelines using our configuration system.
 
 **Next Steps:**
 - Enhanced UMLS integration with full QuickUMLS support
@@ -102,13 +102,13 @@ PyTAKES provides a drop-in replacement for Apache cTAKES with simpler deployment
 - Performance optimizations and Docker containers
 
 **Community:**
-PyTAKES is open source and welcoming contributions. Join us in advancing clinical NLP with modern Python tools!
+PyCTAKES is open source and welcoming contributions. Join us in advancing clinical NLP with modern Python tools!
 
 ---
 
 ## Version Scheme
 
-PyTAKES follows [Semantic Versioning](https://semver.org/):
+PyCTAKES follows [Semantic Versioning](https://semver.org/):
 
 - **MAJOR** version for incompatible API changes
 - **MINOR** version for backwards-compatible functionality additions  

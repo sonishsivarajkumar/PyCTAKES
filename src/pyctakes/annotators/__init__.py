@@ -1,4 +1,4 @@
-"""Annotators package for PyTAKES."""
+"""Annotators package for PyCTAKES."""
 
 from .base import Annotator
 from .tokenization import ClinicalSentenceSegmenter, ClinicalTokenizer

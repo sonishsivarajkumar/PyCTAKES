@@ -1,13 +1,13 @@
 # Quick Start Tutorial
 
-This tutorial will get you up and running with PyTAKES in just a few minutes.
+This tutorial will get you up and running with PyCTAKES in just a few minutes.
 
 ## Step 1: Installation
 
-First, install PyTAKES:
+First, install PyCTAKES:
 
 ```bash
-pip install pytakes
+pip install pyctakes
 ```
 
 For enhanced functionality, also install spaCy:
@@ -22,10 +22,10 @@ python -m spacy download en_core_web_sm
 Let's start with a simple example:
 
 ```python
-import pytakes
+import pyctakes
 
 # Create a pipeline
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 
 # Sample clinical text
 clinical_text = """
@@ -52,10 +52,10 @@ print(f"Total annotations: {len(result.document.annotations)}")
 
 ## Step 3: Exploring Annotations
 
-PyTAKES produces different types of annotations. Let's examine them:
+PyCTAKES produces different types of annotations. Let's examine them:
 
 ```python
-from pytakes.types import AnnotationType
+from pyctakes.types import AnnotationType
 
 # Get different annotation types
 sentences = result.document.get_annotations(AnnotationType.SENTENCE)
@@ -101,7 +101,7 @@ for section in sections:
 
 ## Step 4: Different Pipeline Types
 
-PyTAKES offers multiple pipeline configurations:
+PyCTAKES offers multiple pipeline configurations:
 
 ### Fast Pipeline
 
@@ -109,7 +109,7 @@ For high-speed processing:
 
 ```python
 # Fast pipeline - optimized for speed
-fast_pipeline = pytakes.create_fast_pipeline()
+fast_pipeline = pyctakes.create_fast_pipeline()
 fast_result = fast_pipeline.process_text(clinical_text)
 
 print(f"Fast processing time: {fast_result.processing_time:.3f} seconds")
@@ -121,7 +121,7 @@ For simple use cases:
 
 ```python
 # Basic pipeline - minimal features
-basic_pipeline = pytakes.create_basic_pipeline()
+basic_pipeline = pyctakes.create_basic_pipeline()
 basic_result = basic_pipeline.process_text(clinical_text)
 
 print(f"Basic processing time: {basic_result.processing_time:.3f} seconds")
@@ -132,8 +132,8 @@ print(f"Basic processing time: {basic_result.processing_time:.3f} seconds")
 Build your own pipeline:
 
 ```python
-from pytakes import Pipeline
-from pytakes.annotators import (
+from pyctakes import Pipeline
+from pyctakes.annotators import (
     ClinicalTokenizer, 
     ClinicalNERAnnotator, 
     NegationAssertionAnnotator
@@ -150,14 +150,14 @@ custom_result = custom_pipeline.process_text(clinical_text)
 
 ## Step 5: Command Line Usage
 
-PyTAKES also provides a command-line interface:
+PyCTAKES also provides a command-line interface:
 
 ```bash
 # Save sample text to file
 echo "Patient has diabetes and takes metformin." > sample.txt
 
 # Annotate the file
-pytakes annotate sample.txt --output results.json
+pyctakes annotate sample.txt --output results.json
 
 # View results
 cat results.json
@@ -167,11 +167,11 @@ cat results.json
 
 ```bash
 # Text format
-pytakes annotate sample.txt --format text
+pyctakes annotate sample.txt --format text
 
 # Different pipeline types
-pytakes annotate sample.txt --pipeline fast --format text
-pytakes annotate sample.txt --pipeline basic --output basic_results.json
+pyctakes annotate sample.txt --pipeline fast --format text
+pyctakes annotate sample.txt --pipeline basic --output basic_results.json
 ```
 
 ## Step 6: Configuration
@@ -203,13 +203,13 @@ with open("config.json", "w") as f:
 Use the configuration:
 
 ```bash
-pytakes annotate sample.txt --config config.json --output configured_results.json
+pyctakes annotate sample.txt --config config.json --output configured_results.json
 ```
 
 Or in Python:
 
 ```python
-configured_pipeline = pytakes.create_default_pipeline(config)
+configured_pipeline = pyctakes.create_default_pipeline(config)
 ```
 
 ## Step 7: Real-World Example
@@ -294,7 +294,7 @@ from pathlib import Path
 
 # Process all text files in a directory
 notes_dir = Path("clinical_notes")
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 
 for note_file in notes_dir.glob("*.txt"):
     text = note_file.read_text()
@@ -332,4 +332,4 @@ print(f"Wall clock time: {end_time - start_time:.3f}s")
 print(f"Annotations per second: {len(result.document.annotations)/result.processing_time:.1f}")
 ```
 
-You're now ready to use PyTAKES for your clinical NLP projects!
+You're now ready to use PyCTAKES for your clinical NLP projects!

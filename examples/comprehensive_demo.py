@@ -1,7 +1,7 @@
-"""Comprehensive example demonstrating PyTAKES clinical NLP capabilities."""
+"""Comprehensive example demonstrating PyCTAKES clinical NLP capabilities."""
 
-import pytakes
-from pytakes.types import Document, AnnotationType
+import pyctakes
+from pyctakes.types import Document, AnnotationType
 
 
 def demo_default_pipeline():
@@ -30,7 +30,7 @@ def demo_default_pipeline():
     """
     
     # Create default pipeline
-    pipeline = pytakes.create_default_pipeline()
+    pipeline = pyctakes.create_default_pipeline()
     
     # Process the text
     result = pipeline.process_text(clinical_text, doc_id="example_note")
@@ -77,7 +77,7 @@ def demo_fast_pipeline():
     """
     
     # Create fast pipeline
-    pipeline = pytakes.create_fast_pipeline()
+    pipeline = pyctakes.create_fast_pipeline()
     
     # Process the text
     result = pipeline.process_text(clinical_text, doc_id="fast_example")
@@ -96,8 +96,8 @@ def demo_custom_pipeline():
     """Demonstrate creating a custom pipeline."""
     print("\n=== Custom Pipeline Demo ===")
     
-    from pytakes import Pipeline
-    from pytakes.annotators import (
+    from pyctakes import Pipeline
+    from pyctakes.annotators import (
         ClinicalTokenizer, ClinicalNERAnnotator, NegationAssertionAnnotator
     )
     
@@ -176,7 +176,7 @@ def demo_section_detection():
     """
     
     # Use basic pipeline to focus on sections
-    pipeline = pytakes.create_basic_pipeline()
+    pipeline = pyctakes.create_basic_pipeline()
     result = pipeline.process_text(clinical_text, doc_id="section_example")
     
     sections = result.document.get_annotations(AnnotationType.SECTION)
@@ -195,8 +195,8 @@ def main():
     demo_custom_pipeline()
     demo_section_detection()
     
-    print("\n=== PyTAKES Demo Complete ===")
-    print("Try running with: python -m pytakes.cli annotate <text_file>")
+    print("\n=== PyCTAKES Demo Complete ===")
+    print("Try running with: python -m pyctakes.cli annotate <text_file>")
 
 
 if __name__ == "__main__":

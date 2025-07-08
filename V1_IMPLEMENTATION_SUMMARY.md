@@ -1,8 +1,8 @@
-# PyTAKES v1.0 Implementation Summary
+# PyCTAKES v1.0 Implementation Summary
 
 ## 🎯 Mission Accomplished!
 
-We have successfully implemented the core features for PyTAKES v1.0, delivering a comprehensive clinical NLP framework that mirrors and extends Apache cTAKES functionality in pure Python.
+We have successfully implemented the core features for PyCTAKES v1.0, delivering a comprehensive clinical NLP framework that mirrors and extends Apache cTAKES functionality in pure Python.
 
 ## ✅ Features Implemented
 
@@ -77,7 +77,7 @@ We have successfully implemented the core features for PyTAKES v1.0, delivering 
 - Basic concept normalization
 
 ### 6. Command Line Interface
-- **Document annotation**: `pytakes annotate <file> --output <output>`
+- **Document annotation**: `pyctakes annotate <file> --output <output>`
 - **Multiple output formats**: JSON, text
 - **Pipeline selection**: `--pipeline default|fast|basic`
 - **Configuration support**: `--config <config.json>`
@@ -85,15 +85,15 @@ We have successfully implemented the core features for PyTAKES v1.0, delivering 
 
 ### 7. Python API
 ```python
-import pytakes
+import pyctakes
 
 # Quick start
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 result = pipeline.process_text(clinical_text)
 
 # Custom pipeline
-from pytakes import Pipeline
-from pytakes.annotators import ClinicalNERAnnotator
+from pyctakes import Pipeline
+from pyctakes.annotators import ClinicalNERAnnotator
 
 pipeline = Pipeline()
 pipeline.add_annotator(ClinicalNERAnnotator())
@@ -166,7 +166,7 @@ While v1.0 core features are complete, the roadmap continues with:
 
 ## 🏁 Conclusion
 
-**PyTAKES v1.0 successfully delivers on its promise**: A modern, Python-native clinical NLP framework that matches cTAKES functionality while providing superior usability, extensibility, and performance. 
+**PyCTAKES v1.0 successfully delivers on its promise**: A modern, Python-native clinical NLP framework that matches cTAKES functionality while providing superior usability, extensibility, and performance. 
 
 The implementation provides a solid foundation for clinical text processing with room for advanced features and optimizations in future releases.
 

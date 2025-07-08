@@ -1,6 +1,6 @@
 # Pipeline Overview
 
-PyTAKES uses a pipeline-based architecture where clinical text flows through a series of annotators, each adding specific types of annotations.
+PyCTAKES uses a pipeline-based architecture where clinical text flows through a series of annotators, each adding specific types of annotations.
 
 ## Pipeline Architecture
 
@@ -21,16 +21,16 @@ graph TB
 
 ## Pipeline Types
 
-PyTAKES provides three pre-configured pipeline types to suit different needs:
+PyCTAKES provides three pre-configured pipeline types to suit different needs:
 
 ### Default Pipeline
 
 The complete clinical NLP pipeline with all features enabled:
 
 ```python
-import pytakes
+import pyctakes
 
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 ```
 
 **Components:**
@@ -48,7 +48,7 @@ pipeline = pytakes.create_default_pipeline()
 Speed-optimized pipeline using rule-based components:
 
 ```python
-pipeline = pytakes.create_fast_pipeline()
+pipeline = pyctakes.create_fast_pipeline()
 ```
 
 **Components:**
@@ -64,7 +64,7 @@ pipeline = pytakes.create_fast_pipeline()
 Minimal pipeline for simple use cases:
 
 ```python
-pipeline = pytakes.create_basic_pipeline()
+pipeline = pyctakes.create_basic_pipeline()
 ```
 
 **Components:**
@@ -79,8 +79,8 @@ pipeline = pytakes.create_basic_pipeline()
 Build your own pipeline with specific annotators:
 
 ```python
-from pytakes import Pipeline
-from pytakes.annotators import (
+from pyctakes import Pipeline
+from pyctakes.annotators import (
     ClinicalSentenceSegmenter,
     ClinicalTokenizer,
     ClinicalNERAnnotator,
@@ -165,7 +165,7 @@ config = {
     }
 }
 
-pipeline = pytakes.create_default_pipeline(config)
+pipeline = pyctakes.create_default_pipeline(config)
 ```
 
 ## Pipeline Management
@@ -173,7 +173,7 @@ pipeline = pytakes.create_default_pipeline(config)
 ### Adding Annotators
 
 ```python
-from pytakes.annotators import ClinicalSectionAnnotator
+from pyctakes.annotators import ClinicalSectionAnnotator
 
 # Add annotator to existing pipeline
 pipeline.add_annotator(ClinicalSectionAnnotator())
@@ -237,7 +237,7 @@ speed_config = {
     }
 }
 
-fast_pipeline = pytakes.create_default_pipeline(speed_config)
+fast_pipeline = pyctakes.create_default_pipeline(speed_config)
 ```
 
 ## Error Handling
@@ -306,11 +306,11 @@ with open("pipeline_config.json", "r") as f:
     loaded_config = json.load(f)
 
 # Create pipeline from configuration
-pipeline = pytakes.create_default_pipeline(loaded_config)
+pipeline = pyctakes.create_default_pipeline(loaded_config)
 ```
 
 ## Next Steps
 
 - **[Annotators Guide](annotators.md)** - Deep dive into individual annotators
 - **[Configuration](configuration.md)** - Advanced configuration options
-- **[Command Line Interface](cli.md)** - Using PyTAKES from the command line
+- **[Command Line Interface](cli.md)** - Using PyCTAKES from the command line

@@ -1,10 +1,10 @@
 # UMLS Integration
 
-Comprehensive guide to integrating PyTAKES with the Unified Medical Language System (UMLS).
+Comprehensive guide to integrating PyCTAKES with the Unified Medical Language System (UMLS).
 
 ## Overview
 
-The Unified Medical Language System (UMLS) is a comprehensive set of files and software that brings together biomedical vocabularies and standards to enable interoperability between systems. PyTAKES provides flexible UMLS integration for concept normalization and mapping.
+The Unified Medical Language System (UMLS) is a comprehensive set of files and software that brings together biomedical vocabularies and standards to enable interoperability between systems. PyCTAKES provides flexible UMLS integration for concept normalization and mapping.
 
 ## UMLS Components
 
@@ -73,12 +73,12 @@ umls_dict = {
 }
 ```
 
-## PyTAKES UMLS Integration
+## PyCTAKES UMLS Integration
 
 ### Basic UMLS Annotator
 
 ```python
-from pytakes.annotators.umls import UMLSConceptMapper
+from pyctakes.annotators.umls import UMLSConceptMapper
 
 # Create UMLS annotator
 umls = UMLSConceptMapper(
@@ -131,8 +131,8 @@ umls_config = {
 ### Advanced UMLS Annotator
 
 ```python
-from pytakes.annotators.umls import AdvancedUMLSAnnotator
-from pytakes.types import UMLSConcept
+from pyctakes.annotators.umls import AdvancedUMLSAnnotator
+from pyctakes.types import UMLSConcept
 
 class AdvancedUMLSAnnotator(BaseAnnotator):
     def __init__(self, umls_path, **kwargs):

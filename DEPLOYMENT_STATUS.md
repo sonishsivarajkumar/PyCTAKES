@@ -1,9 +1,9 @@
-# PyTAKES Deployment Status
+# PyCTAKES Deployment Status
 
 ## ✅ Completed Tasks
 
 ### 1. Core Implementation
-- [x] Full PyTAKES v1.0 clinical NLP pipeline implemented
+- [x] Full PyCTAKES v1.0 clinical NLP pipeline implemented
 - [x] All annotators: Tokenizer, Section Detection, NER, Assertion, UMLS Mapping
 - [x] CLI and API interfaces
 - [x] Comprehensive test suite
@@ -38,7 +38,7 @@
 ## 📍 Next Steps
 
 ### 1. Verify Documentation Deployment
-- **GitHub Pages URL**: https://sonishsivarajkumar.github.io/PyTAKES/
+- **GitHub Pages URL**: https://sonishsivarajkumar.github.io/PyCTAKES/
 - **Expected**: Live documentation within 5-10 minutes of push
 
 ### 2. Public Release Announcement
@@ -55,8 +55,8 @@ Once documentation is live:
 
 ## 🚀 Repository Information
 
-- **Repository**: https://github.com/sonishsivarajkumar/PyTAKES
-- **Documentation**: https://sonishsivarajkumar.github.io/PyTAKES/
+- **Repository**: https://github.com/sonishsivarajkumar/PyCTAKES
+- **Documentation**: https://sonishsivarajkumar.github.io/PyCTAKES/
 - **License**: MIT
 - **Python**: 3.8+ compatible
 - **Framework**: Modern Python with click, spaCy, NLTK integration
@@ -65,4 +65,4 @@ Once documentation is live:
 
 **Overall Progress**: 95% Complete ✅
 
-The PyTAKES project is now fully implemented and ready for public release. The GitHub Actions workflow has been updated to use the latest versions and should successfully build and deploy the documentation to GitHub Pages within the next few minutes.
+The PyCTAKES project is now fully implemented and ready for public release. The GitHub Actions workflow has been updated to use the latest versions and should successfully build and deploy the documentation to GitHub Pages within the next few minutes.

@@ -7,7 +7,7 @@ from ..types import Annotation, Document
 
 
 class Annotator(ABC):
-    """Base class for all PyTAKES annotators."""
+    """Base class for all PyCTAKES annotators."""
     
     def __init__(self, config: Optional[Dict[str, Any]] = None):
         """Initialize the annotator with optional configuration."""

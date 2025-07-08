@@ -1,21 +1,21 @@
-# PyTAKES
+# PyCTAKES
 
-![PyTAKES Logo](https://img.shields.io/badge/PyTAKES-Clinical%20NLP-teal?style=for-the-badge)
+![PyCTAKES Logo](https://img.shields.io/badge/PyCTAKES-Clinical%20NLP-teal?style=for-the-badge)
 
 **Python-native clinical NLP framework that mirrors and extends Apache cTAKES**
 
-[![PyPI version](https://badge.fury.io/py/pytakes.svg)](https://badge.fury.io/py/pytakes)
-[![Python versions](https://img.shields.io/pypi/pyversions/pytakes.svg)](https://pypi.org/project/pytakes/)
+[![PyPI version](https://badge.fury.io/py/pyctakes.svg)](https://badge.fury.io/py/pyctakes)
+[![Python versions](https://img.shields.io/pypi/pyversions/pyctakes.svg)](https://pypi.org/project/pyctakes/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build Status](https://github.com/sonish777/pytakes/workflows/CI/badge.svg)](https://github.com/sonish777/pytakes/actions)
-[![Documentation Status](https://readthedocs.org/projects/pytakes/badge/?version=latest)](https://pytakes.readthedocs.io/en/latest/?badge=latest)
-[![Coverage](https://codecov.io/gh/sonish777/pytakes/branch/main/graph/badge.svg)](https://codecov.io/gh/sonish777/pytakes)
+[![Build Status](https://github.com/sonish777/pyctakes/workflows/CI/badge.svg)](https://github.com/sonish777/pyctakes/actions)
+[![Documentation Status](https://readthedocs.org/projects/pyctakes/badge/?version=latest)](https://pyctakes.readthedocs.io/en/latest/?badge=latest)
+[![Coverage](https://codecov.io/gh/sonish777/pyctakes/branch/main/graph/badge.svg)](https://codecov.io/gh/sonish777/pyctakes)
 
 ---
 
-## 🏥 What is PyTAKES?
+## 🏥 What is PyCTAKES?
 
-PyTAKES is a comprehensive, modern clinical Natural Language Processing framework built entirely in Python. It provides end-to-end clinical text processing capabilities that match and extend Apache cTAKES functionality while being easier to install, use, and extend.
+PyCTAKES is a comprehensive, modern clinical Natural Language Processing framework built entirely in Python. It provides end-to-end clinical text processing capabilities that match and extend Apache cTAKES functionality while being easier to install, use, and extend.
 
 ## ✨ Key Features
 
@@ -44,16 +44,16 @@ PyTAKES is a comprehensive, modern clinical Natural Language Processing framewor
 ### Installation
 
 ```bash
-pip install pytakes
+pip install pyctakes
 ```
 
 ### Basic Usage
 
 ```python
-import pytakes
+import pyctakes
 
 # Create a clinical NLP pipeline
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 
 # Process clinical text
 clinical_text = """
@@ -84,18 +84,18 @@ lisinopril -> medication
 
 ```bash
 # Annotate a clinical note
-pytakes annotate clinical_note.txt --output annotations.json
+pyctakes annotate clinical_note.txt --output annotations.json
 
 # Use different pipeline types
-pytakes annotate clinical_note.txt --pipeline fast --format text
+pyctakes annotate clinical_note.txt --pipeline fast --format text
 
 # Batch process multiple files
-pytakes batch-process ./clinical_notes/ --output ./annotations/
+pyctakes batch-process ./clinical_notes/ --output ./annotations/
 ```
 
 ## 🏗️ Architecture
 
-PyTAKES follows a modular, pipeline-based architecture:
+PyCTAKES follows a modular, pipeline-based architecture:
 
 ```mermaid
 graph LR
@@ -118,7 +118,7 @@ graph LR
 
 ## 🔧 Configuration
 
-PyTAKES is highly configurable via JSON configuration files:
+PyCTAKES is highly configurable via JSON configuration files:
 
 ```json
 {
@@ -166,10 +166,10 @@ PyTAKES is highly configurable via JSON configuration files:
 
 ## 🤝 Community & Support
 
-- 📂 **GitHub**: [https://github.com/sonish777/pytakes](https://github.com/sonish777/pytakes)
-- 📖 **Documentation**: [https://pytakes.readthedocs.io](https://pytakes.readthedocs.io)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/sonish777/pytakes/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/sonish777/pytakes/discussions)
+- 📂 **GitHub**: [https://github.com/sonish777/pyctakes](https://github.com/sonish777/pyctakes)
+- 📖 **Documentation**: [https://pyctakes.readthedocs.io](https://pyctakes.readthedocs.io)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/sonish777/pyctakes/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/sonish777/pyctakes/discussions)
 
 ## 🛣️ Roadmap
 
@@ -180,11 +180,11 @@ PyTAKES is highly configurable via JSON configuration files:
 
 ## 📄 License
 
-PyTAKES is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
+PyCTAKES is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-PyTAKES is inspired by [Apache cTAKES](https://ctakes.apache.org/) and builds upon the excellent work of the clinical NLP community. Special thanks to the developers of spaCy, scispaCy, and other open-source libraries that make this project possible.
+PyCTAKES is inspired by [Apache cTAKES](https://ctakes.apache.org/) and builds upon the excellent work of the clinical NLP community. Special thanks to the developers of spaCy, scispaCy, and other open-source libraries that make this project possible.
 
 ---
 

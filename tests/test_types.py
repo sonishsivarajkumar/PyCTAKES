@@ -1,7 +1,7 @@
 """Test core types."""
 
 import pytest
-from pytakes.types import (
+from pyctakes.types import (
     Span, Annotation, Document, AnnotationType, 
     EntityType, AssertionType, TokenAnnotation
 )

@@ -1,6 +1,6 @@
 # Types API Reference
 
-PyTAKES uses a comprehensive type system to represent clinical text and annotations.
+PyCTAKES uses a comprehensive type system to represent clinical text and annotations.
 
 ## Core Types
 
@@ -91,7 +91,7 @@ UMLS concept information.
 ### Creating Documents
 
 ```python
-from pytakes.types import Document
+from pyctakes.types import Document
 
 # Create document from text
 doc = Document(text="Patient has diabetes and hypertension.")
@@ -110,7 +110,7 @@ doc = Document(
 ### Working with Annotations
 
 ```python
-from pytakes.types import Annotation, Document
+from pyctakes.types import Annotation, Document
 
 doc = Document(text="Patient has diabetes.")
 
@@ -134,7 +134,7 @@ for ann in doc.annotations:
 ### Working with Entities
 
 ```python
-from pytakes.types import Entity, Assertion
+from pyctakes.types import Entity, Assertion
 
 # Create entity with assertion
 entity = Entity(
@@ -156,7 +156,7 @@ doc.entities.append(entity)
 ### Working with Tokens
 
 ```python
-from pytakes.types import Token, Sentence
+from pyctakes.types import Token, Sentence
 
 # Create tokens
 tokens = [
@@ -180,7 +180,7 @@ doc.sentences.append(sentence)
 ### Working with Sections
 
 ```python
-from pytakes.types import Section
+from pyctakes.types import Section
 
 # Create section
 section = Section(
@@ -197,7 +197,7 @@ doc.sections.append(section)
 ### Working with UMLS Concepts
 
 ```python
-from pytakes.types import UMLSConcept
+from pyctakes.types import UMLSConcept
 
 # Create UMLS concept
 concept = UMLSConcept(
@@ -226,7 +226,7 @@ Annotation (base)
 
 ### Entity Types
 
-Common entity labels used in PyTAKES:
+Common entity labels used in PyCTAKES:
 
 - **MEDICATION**: Drugs and medications
 - **DOSAGE**: Medication dosages
@@ -278,7 +278,7 @@ All types support JSON serialization:
 
 ```python
 import json
-from pytakes.types import Document
+from pyctakes.types import Document
 
 # Create document with annotations
 doc = Document(text="Patient has diabetes.")
@@ -340,10 +340,10 @@ Example JSON output:
 
 ## Type Validation
 
-PyTAKES includes validation for type safety:
+PyCTAKES includes validation for type safety:
 
 ```python
-from pytakes.types import Document, ValidationError
+from pyctakes.types import Document, ValidationError
 
 try:
     # Invalid annotation (end before start)
@@ -357,7 +357,7 @@ except ValidationError as e:
 You can extend the base types for custom use cases:
 
 ```python
-from pytakes.types import Entity
+from pyctakes.types import Entity
 from dataclasses import dataclass
 
 @dataclass

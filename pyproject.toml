@@ -75,10 +75,10 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/sonishsivarajkumar/PyTAKES"
-Documentation = "https://pytakes.readthedocs.io"
-Repository = "https://github.com/sonishsivarajkumar/PyTAKES.git"
-"Bug Tracker" = "https://github.com/sonishsivarajkumar/PyTAKES/issues"
+Homepage = "https://github.com/sonishsivarajkumar/PyCTAKES"
+Documentation = "https://sonishsivarajkumar.github.io/PyCTAKES/"
+Repository = "https://github.com/sonishsivarajkumar/PyCTAKES.git"
+"Bug Tracker" = "https://github.com/sonishsivarajkumar/PyCTAKES/issues"
 
 [project.scripts]
 pytakes = "pytakes.cli:main"

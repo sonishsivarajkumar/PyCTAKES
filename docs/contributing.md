@@ -1,6 +1,6 @@
-# Contributing to PyTAKES
+# Contributing to PyCTAKES
 
-Thank you for your interest in contributing to PyTAKES! This guide will help you get started with contributing to the project.
+Thank you for your interest in contributing to PyCTAKES! This guide will help you get started with contributing to the project.
 
 ## Development Setup
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing to PyTAKES! This guide will help you
 1. **Fork and Clone**
    ```bash
    # Fork the repository on GitHub
-   git clone https://github.com/YOUR_USERNAME/pytakes.git
-   cd pytakes
+   git clone https://github.com/YOUR_USERNAME/pyctakes.git
+   cd pyctakes
    ```
 
 2. **Create Virtual Environment**
@@ -38,7 +38,7 @@ Thank you for your interest in contributing to PyTAKES! This guide will help you
 5. **Verify Setup**
    ```bash
    python -m pytest tests/
-   python -m pytakes --help
+   python -m pyctakes --help
    ```
 
 ## Development Workflow
@@ -62,7 +62,7 @@ git push origin feature/your-feature-name
 
 ### Code Style and Quality
 
-PyTAKES uses several tools to maintain code quality:
+PyCTAKES uses several tools to maintain code quality:
 
 - **Black**: Code formatting
 - **isort**: Import sorting
@@ -98,7 +98,7 @@ pytest
 pytest tests/test_pipeline.py
 
 # Run with coverage
-pytest --cov=pytakes tests/
+pytest --cov=pyctakes tests/
 
 # Run integration tests
 pytest tests/test_integrated_pipeline.py -v
@@ -111,8 +111,8 @@ Create tests for new functionality:
 ```python
 # tests/test_new_feature.py
 import pytest
-from pytakes.types import Document
-from pytakes.your_module import YourClass
+from pyctakes.types import Document
+from pyctakes.your_module import YourClass
 
 class TestYourClass:
     def setup_method(self):
@@ -259,7 +259,7 @@ def create_annotator_from_config(config: Dict[str, Any]) -> BaseAnnotator:
 Use consistent error handling:
 
 ```python
-from pytakes.exceptions import PyTAKESError, AnnotationError
+from pyctakes.exceptions import PyCTAKESError, AnnotationError
 
 class CustomAnnotator(BaseAnnotator):
     def process(self, doc: Document) -> Document:
@@ -283,7 +283,7 @@ def process_clinical_text(text: str, pipeline: Pipeline) -> Document:
     
     Args:
         text: Clinical text to process
-        pipeline: PyTAKES pipeline instance
+        pipeline: PyCTAKES pipeline instance
         
     Returns:
         Processed document with annotations
@@ -315,7 +315,7 @@ Update API docs for new classes/methods:
 ```markdown
 ## NewAnnotator
 
-::: pytakes.annotators.new.NewAnnotator
+::: pyctakes.annotators.new.NewAnnotator
     options:
       show_source: false
       heading_level: 3
@@ -403,7 +403,7 @@ Brief description of changes
 
 ### Version Numbering
 
-PyTAKES follows semantic versioning:
+PyCTAKES follows semantic versioning:
 - **Major**: Breaking changes (1.0.0 → 2.0.0)
 - **Minor**: New features (1.0.0 → 1.1.0)
 - **Patch**: Bug fixes (1.0.0 → 1.0.1)
@@ -454,4 +454,4 @@ Contributors will be recognized in:
 - Release notes
 - Documentation credits
 
-Thank you for contributing to PyTAKES! 🎉
+Thank you for contributing to PyCTAKES! 🎉

@@ -1,10 +1,10 @@
 # Performance Tuning
 
-Optimize PyTAKES performance for production workloads and large-scale processing.
+Optimize PyCTAKES performance for production workloads and large-scale processing.
 
 ## Performance Overview
 
-PyTAKES performance depends on several factors:
+PyCTAKES performance depends on several factors:
 - **Pipeline configuration**: Choice of annotators and backends
 - **Text characteristics**: Length, complexity, clinical content density
 - **Hardware resources**: CPU, memory, disk I/O
@@ -29,7 +29,7 @@ Based on our performance testing with clinical notes:
 Select the appropriate pipeline for your use case:
 
 ```python
-from pytakes.pipeline import (
+from pyctakes.pipeline import (
     create_basic_pipeline,    # Fastest, minimal features
     create_fast_pipeline,     # Good balance of speed/features
     create_default_pipeline   # Full features, slower
@@ -73,8 +73,8 @@ config = {
 Disable unnecessary annotators:
 
 ```python
-from pytakes.pipeline import Pipeline
-from pytakes.annotators import TokenizationAnnotator, NERAnnotator
+from pyctakes.pipeline import Pipeline
+from pyctakes.annotators import TokenizationAnnotator, NERAnnotator
 
 # Minimal pipeline - only what you need
 pipeline = Pipeline()
@@ -401,7 +401,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PyTAKES
+# Install PyCTAKES
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 

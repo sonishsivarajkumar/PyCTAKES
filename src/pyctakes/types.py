@@ -1,4 +1,4 @@
-"""Core data types for PyTAKES."""
+"""Core data types for PyCTAKES."""
 
 from typing import Any, Dict, List, Optional, Union
 from dataclasses import dataclass, field
@@ -6,7 +6,7 @@ from enum import Enum
 
 
 class AnnotationType(Enum):
-    """Types of annotations supported by PyTAKES."""
+    """Types of annotations supported by PyCTAKES."""
     TOKEN = "token"
     SENTENCE = "sentence"
     SECTION = "section"
@@ -56,7 +56,7 @@ class Span:
 
 @dataclass
 class Annotation:
-    """Base annotation class for all PyTAKES annotations."""
+    """Base annotation class for all PyCTAKES annotations."""
     span: Span
     text: str
     annotation_type: AnnotationType

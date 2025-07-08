@@ -1,10 +1,10 @@
-# 🎉 PyTAKES v1.0 - Public Release Announcement
+# 🎉 PyCTAKES v1.0 - Public Release Announcement
 
-We're excited to announce the public release of **PyTAKES v1.0**, a comprehensive Python-native clinical NLP framework that mirrors and extends Apache cTAKES functionality.
+We're excited to announce the public release of **PyCTAKES v1.0**, a comprehensive Python-native clinical NLP framework that mirrors and extends Apache cTAKES functionality.
 
-## 🚀 What is PyTAKES?
+## 🚀 What is PyCTAKES?
 
-PyTAKES is a modern, pure-Python clinical natural language processing framework designed to:
+PyCTAKES is a modern, pure-Python clinical natural language processing framework designed to:
 
 - **Replace Apache cTAKES** with simpler deployment (no Java required)
 - **Process clinical text** with state-of-the-art accuracy and performance
@@ -47,16 +47,16 @@ PyTAKES is a modern, pure-Python clinical natural language processing framework 
 ### Installation
 
 ```bash
-pip install pytakes
+pip install pyctakes
 ```
 
 ### Basic Usage
 
 ```python
-import pytakes
+import pyctakes
 
 # Create pipeline
-pipeline = pytakes.create_default_pipeline()
+pipeline = pyctakes.create_default_pipeline()
 
 # Process clinical text
 result = pipeline.process_text("""
@@ -74,10 +74,10 @@ for entity in result.entities:
 
 ```bash
 # Process a clinical note
-pytakes process note.txt --output results.json
+pyctakes process note.txt --output results.json
 
 # Use fast pipeline
-pytakes process note.txt --pipeline fast
+pyctakes process note.txt --pipeline fast
 ```
 
 ## 📚 Comprehensive Documentation
@@ -90,7 +90,7 @@ Our documentation includes:
 - **Advanced Topics**: Custom annotators, performance tuning, UMLS integration
 - **Examples**: Real-world usage examples and configurations
 
-**🔗 Documentation**: [https://sonishsivarajkumar.github.io/PyTAKES](https://sonishsivarajkumar.github.io/PyTAKES)
+**🔗 Documentation**: [https://sonishsivarajkumar.github.io/PyCTAKES](https://sonishsivarajkumar.github.io/PyCTAKES)
 
 ## 🌟 Highlights
 
@@ -114,14 +114,14 @@ Our documentation includes:
 
 ## 🔗 Links
 
-- **GitHub**: [https://github.com/sonishsivarajkumar/PyTAKES](https://github.com/sonishsivarajkumar/PyTAKES)
-- **Documentation**: [https://sonishsivarajkumar.github.io/PyTAKES](https://sonishsivarajkumar.github.io/PyTAKES)
-- **PyPI Package**: [https://pypi.org/project/pytakes/](https://pypi.org/project/pytakes/) *(coming soon)*
-- **Examples**: [GitHub Examples](https://github.com/sonishsivarajkumar/PyTAKES/tree/main/examples)
+- **GitHub**: [https://github.com/sonishsivarajkumar/PyCTAKES](https://github.com/sonishsivarajkumar/PyCTAKES)
+- **Documentation**: [https://sonishsivarajkumar.github.io/PyCTAKES](https://sonishsivarajkumar.github.io/PyCTAKES)
+- **PyPI Package**: [https://pypi.org/project/pyctakes/](https://pypi.org/project/pyctakes/) *(coming soon)*
+- **Examples**: [GitHub Examples](https://github.com/sonishsivarajkumar/PyCTAKES/tree/main/examples)
 
 ## 🤝 Contributing
 
-PyTAKES is open source and welcomes contributions! Whether you want to:
+PyCTAKES is open source and welcomes contributions! Whether you want to:
 
 - Report bugs or request features
 - Contribute code improvements
@@ -129,7 +129,7 @@ PyTAKES is open source and welcomes contributions! Whether you want to:
 - Improve documentation
 - Share use cases and examples
 
-Check out our [Contributing Guide](https://sonishsivarajkumar.github.io/PyTAKES/contributing/) to get started.
+Check out our [Contributing Guide](https://sonishsivarajkumar.github.io/PyCTAKES/contributing/) to get started.
 
 ## 🗺 Roadmap
 
@@ -144,14 +144,14 @@ While v1.0 delivers comprehensive clinical NLP capabilities, we're already plann
 
 ## 📄 License
 
-PyTAKES is released under the MIT License, making it free for both academic and commercial use.
+PyCTAKES is released under the MIT License, making it free for both academic and commercial use.
 
 ## 🙏 Acknowledgments
 
-PyTAKES builds upon the excellent work of the Apache cTAKES project and the broader clinical NLP community. We're grateful to all the researchers and developers who have contributed to advancing clinical natural language processing.
+PyCTAKES builds upon the excellent work of the Apache cTAKES project and the broader clinical NLP community. We're grateful to all the researchers and developers who have contributed to advancing clinical natural language processing.
 
 ---
 
-**Ready to revolutionize your clinical text processing? Try PyTAKES today!** 🚀
+**Ready to revolutionize your clinical text processing? Try PyCTAKES today!** 🚀
 
-*For questions, support, or discussions, please use our [GitHub Discussions](https://github.com/sonishsivarajkumar/PyTAKES/discussions) or open an [issue](https://github.com/sonishsivarajkumar/PyTAKES/issues).*
+*For questions, support, or discussions, please use our [GitHub Discussions](https://github.com/sonishsivarajkumar/PyCTAKES/discussions) or open an [issue](https://github.com/sonishsivarajkumar/PyCTAKES/issues).*

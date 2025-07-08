@@ -1,31 +1,31 @@
 # Command Line Interface
 
-PyTAKES provides a comprehensive command-line interface for processing clinical text without writing code.
+PyCTAKES provides a comprehensive command-line interface for processing clinical text without writing code.
 
 ## Basic Usage
 
 ```bash
 # Process a single file
-pytakes process input.txt
+pyctakes process input.txt
 
 # Process with output file
-pytakes process input.txt --output output.json
+pyctakes process input.txt --output output.json
 
 # Process multiple files
-pytakes process *.txt --output-dir results/
+pyctakes process *.txt --output-dir results/
 
 # Use custom configuration
-pytakes process input.txt --config my_config.json
+pyctakes process input.txt --config my_config.json
 ```
 
 ## Commands
 
 ### process
 
-Process clinical text files through the PyTAKES pipeline.
+Process clinical text files through the PyCTAKES pipeline.
 
 ```bash
-pytakes process [OPTIONS] INPUT_FILES...
+pyctakes process [OPTIONS] INPUT_FILES...
 ```
 
 **Arguments:**
@@ -44,19 +44,19 @@ pytakes process [OPTIONS] INPUT_FILES...
 
 ```bash
 # Basic processing
-pytakes process note.txt
+pyctakes process note.txt
 
 # Save to file
-pytakes process note.txt --output results.json
+pyctakes process note.txt --output results.json
 
 # Process multiple files
-pytakes process notes/*.txt --output-dir processed/
+pyctakes process notes/*.txt --output-dir processed/
 
 # Use fast pipeline
-pytakes process note.txt --pipeline fast
+pyctakes process note.txt --pipeline fast
 
 # Custom configuration
-pytakes process note.txt --config my_config.json --verbose
+pyctakes process note.txt --config my_config.json --verbose
 ```
 
 ### configure
@@ -64,7 +64,7 @@ pytakes process note.txt --config my_config.json --verbose
 Create and manage configuration files.
 
 ```bash
-pytakes configure [OPTIONS]
+pyctakes configure [OPTIONS]
 ```
 
 **Options:**
@@ -77,21 +77,21 @@ pytakes configure [OPTIONS]
 
 ```bash
 # Create default configuration
-pytakes configure --create config.json
+pyctakes configure --create config.json
 
 # Create from template
-pytakes configure --create fast_config.json --template fast
+pyctakes configure --create fast_config.json --template fast
 
 # Validate configuration
-pytakes configure --validate my_config.json
+pyctakes configure --validate my_config.json
 ```
 
 ### info
 
-Display information about PyTAKES installation and capabilities.
+Display information about PyCTAKES installation and capabilities.
 
 ```bash
-pytakes info [OPTIONS]
+pyctakes info [OPTIONS]
 ```
 
 **Options:**
@@ -104,13 +104,13 @@ pytakes info [OPTIONS]
 
 ```bash
 # General information
-pytakes info
+pyctakes info
 
 # List annotators
-pytakes info --annotators
+pyctakes info --annotators
 
 # Check dependencies
-pytakes info --dependencies
+pyctakes info --dependencies
 ```
 
 ### demo
@@ -118,7 +118,7 @@ pytakes info --dependencies
 Run interactive demonstrations and examples.
 
 ```bash
-pytakes demo [OPTIONS]
+pyctakes demo [OPTIONS]
 ```
 
 **Options:**
@@ -130,13 +130,13 @@ pytakes demo [OPTIONS]
 
 ```bash
 # Interactive demo
-pytakes demo --interactive
+pyctakes demo --interactive
 
 # Run basic example
-pytakes demo --example basic
+pyctakes demo --example basic
 
 # Use sample text
-pytakes demo --sample-text
+pyctakes demo --sample-text
 ```
 
 ## Output Formats
@@ -219,7 +219,7 @@ Complete clinical NLP pipeline with all annotators:
 - UMLS concept mapping
 
 ```bash
-pytakes process note.txt --pipeline default
+pyctakes process note.txt --pipeline default
 ```
 
 ### fast
@@ -230,7 +230,7 @@ Optimized for speed with basic functionality:
 - Basic assertion detection
 
 ```bash
-pytakes process note.txt --pipeline fast
+pyctakes process note.txt --pipeline fast
 ```
 
 ### basic
@@ -240,7 +240,7 @@ Minimal pipeline for simple entity extraction:
 - Named entity recognition (rule-based)
 
 ```bash
-pytakes process note.txt --pipeline basic
+pyctakes process note.txt --pipeline basic
 ```
 
 ### custom
@@ -248,7 +248,7 @@ pytakes process note.txt --pipeline basic
 User-defined pipeline from configuration file:
 
 ```bash
-pytakes process note.txt --pipeline custom --config my_pipeline.json
+pyctakes process note.txt --pipeline custom --config my_pipeline.json
 ```
 
 ## Configuration Examples
@@ -256,7 +256,7 @@ pytakes process note.txt --pipeline custom --config my_pipeline.json
 ### Create Basic Configuration
 
 ```bash
-pytakes configure --create basic_config.json --template basic
+pyctakes configure --create basic_config.json --template basic
 ```
 
 Creates:
@@ -275,7 +275,7 @@ Creates:
 ### Medication-Focused Configuration
 
 ```bash
-pytakes configure --create med_config.json --template medication
+pyctakes configure --create med_config.json --template medication
 ```
 
 Creates configuration optimized for medication extraction.
@@ -286,17 +286,17 @@ Creates configuration optimized for medication extraction.
 
 ```bash
 # Process all .txt files in a directory
-pytakes process input_dir/*.txt --output-dir results/
+pyctakes process input_dir/*.txt --output-dir results/
 
 # Process with specific pattern
-pytakes process "notes_*.txt" --output-dir processed/
+pyctakes process "notes_*.txt" --output-dir processed/
 ```
 
 ### Parallel Processing
 
 ```bash
 # Process files in parallel (if supported)
-pytakes process *.txt --output-dir results/ --parallel --workers 4
+pyctakes process *.txt --output-dir results/ --parallel --workers 4
 ```
 
 ## Advanced Usage
@@ -305,36 +305,36 @@ pytakes process *.txt --output-dir results/ --parallel --workers 4
 
 ```bash
 # Only output entities
-pytakes process note.txt --format json --filter entities
+pyctakes process note.txt --format json --filter entities
 
 # Include confidence scores
-pytakes process note.txt --include-confidence
+pyctakes process note.txt --include-confidence
 
 # Minimal output
-pytakes process note.txt --minimal
+pyctakes process note.txt --minimal
 ```
 
 ### Logging and Debugging
 
 ```bash
 # Verbose logging
-pytakes process note.txt --verbose
+pyctakes process note.txt --verbose
 
 # Debug mode
-pytakes process note.txt --debug
+pyctakes process note.txt --debug
 
 # Log to file
-pytakes process note.txt --log-file processing.log
+pyctakes process note.txt --log-file processing.log
 ```
 
 ### Performance Monitoring
 
 ```bash
 # Show timing information
-pytakes process note.txt --timing
+pyctakes process note.txt --timing
 
 # Profile performance
-pytakes process note.txt --profile
+pyctakes process note.txt --profile
 ```
 
 ## Integration Examples
@@ -346,7 +346,7 @@ pytakes process note.txt --profile
 # Process all patient notes
 for file in patient_notes/*.txt; do
     echo "Processing $file..."
-    pytakes process "$file" --output "results/$(basename "$file" .txt).json"
+    pyctakes process "$file" --output "results/$(basename "$file" .txt).json"
 done
 ```
 
@@ -354,10 +354,10 @@ done
 
 ```bash
 # Use in pipeline
-cat input.txt | pytakes process - --format json | jq '.entities[].text'
+cat input.txt | pyctakes process - --format json | jq '.entities[].text'
 
 # With other tools
-pytakes process notes/*.txt --output-dir results/ && \
+pyctakes process notes/*.txt --output-dir results/ && \
     python analyze_results.py results/
 ```
 
@@ -365,28 +365,28 @@ pytakes process notes/*.txt --output-dir results/ && \
 
 ```bash
 # Continue on errors
-pytakes process *.txt --continue-on-error
+pyctakes process *.txt --continue-on-error
 
 # Skip invalid files
-pytakes process *.txt --skip-invalid
+pyctakes process *.txt --skip-invalid
 
 # Error reporting
-pytakes process *.txt --error-report errors.log
+pyctakes process *.txt --error-report errors.log
 ```
 
 ## Help and Documentation
 
 ```bash
 # General help
-pytakes --help
+pyctakes --help
 
 # Command-specific help
-pytakes process --help
-pytakes configure --help
+pyctakes process --help
+pyctakes configure --help
 
 # Show examples
-pytakes examples
+pyctakes examples
 
 # Version information
-pytakes --version
+pyctakes --version
 ```

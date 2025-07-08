@@ -1,7 +1,7 @@
-"""Test configuration for PyTAKES."""
+"""Test configuration for PyCTAKES."""
 
 import pytest
-from pytakes.types import Document, Span, Annotation, AnnotationType
+from pyctakes.types import Document, Span, Annotation, AnnotationType
 
 
 @pytest.fixture

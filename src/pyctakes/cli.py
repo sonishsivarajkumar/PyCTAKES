@@ -1,4 +1,4 @@
-"""Command-line interface for PyTAKES."""
+"""Command-line interface for PyCTAKES."""
 
 import json
 import sys
@@ -14,7 +14,7 @@ from .types import Document
 @click.group()
 @click.version_option()
 def main():
-    """PyTAKES: Python-native clinical NLP framework."""
+    """PyCTAKES: Python-native clinical NLP framework."""
     pass
 
 
@@ -178,13 +178,13 @@ def batch_process(input_dir: Path, output_dir: Path, pattern: str,
 @click.option('--config', type=click.Path(exists=True, path_type=Path),
               help='Pipeline configuration file')
 def serve(host: str, port: int, config: Optional[Path]):
-    """Start PyTAKES as a REST API server."""
+    """Start PyCTAKES as a REST API server."""
     try:
         import uvicorn
         from .api import create_app
     except ImportError:
         click.echo("FastAPI and uvicorn are required to run the server.", err=True)
-        click.echo("Install with: pip install 'pytakes[api]'", err=True)
+        click.echo("Install with: pip install 'pyctakes[api]'", err=True)
         sys.exit(1)
     
     # Load configuration if provided
@@ -195,7 +195,7 @@ def serve(host: str, port: int, config: Optional[Path]):
     
     app = create_app(pipeline_config)
     
-    click.echo(f"Starting PyTAKES server on http://{host}:{port}")
+    click.echo(f"Starting PyCTAKES server on http://{host}:{port}")
     uvicorn.run(app, host=host, port=port)
 
 

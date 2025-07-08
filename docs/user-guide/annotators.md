@@ -1,6 +1,6 @@
 # Annotators
 
-PyTAKES provides a comprehensive set of annotators for clinical natural language processing. Each annotator specializes in extracting specific types of information from clinical text.
+PyCTAKES provides a comprehensive set of annotators for clinical natural language processing. Each annotator specializes in extracting specific types of information from clinical text.
 
 ## Available Annotators
 
@@ -25,7 +25,7 @@ Handles sentence segmentation and tokenization of clinical text.
 
 **Usage:**
 ```python
-from pytakes.annotators.tokenization import TokenizationAnnotator
+from pyctakes.annotators.tokenization import TokenizationAnnotator
 
 annotator = TokenizationAnnotator(backend="spacy")
 doc = annotator.process(doc)
@@ -67,7 +67,7 @@ Identifies and classifies clinical document sections.
 
 **Usage:**
 ```python
-from pytakes.annotators.sections import SectionAnnotator
+from pyctakes.annotators.sections import SectionAnnotator
 
 annotator = SectionAnnotator()
 doc = annotator.process(doc)
@@ -109,7 +109,7 @@ Performs Named Entity Recognition for clinical entities.
 
 **Usage:**
 ```python
-from pytakes.annotators.ner import NERAnnotator
+from pyctakes.annotators.ner import NERAnnotator
 
 annotator = NERAnnotator(approach="rule_based")
 doc = annotator.process(doc)
@@ -143,7 +143,7 @@ Detects negation, uncertainty, and other assertion attributes.
 
 **Usage:**
 ```python
-from pytakes.annotators.assertion import AssertionAnnotator
+from pyctakes.annotators.assertion import AssertionAnnotator
 
 annotator = AssertionAnnotator()
 doc = annotator.process(doc)
@@ -177,7 +177,7 @@ Maps clinical concepts to UMLS (Unified Medical Language System) codes.
 
 **Usage:**
 ```python
-from pytakes.annotators.umls import UMLSAnnotator
+from pyctakes.annotators.umls import UMLSAnnotator
 
 annotator = UMLSAnnotator()
 doc = annotator.process(doc)
@@ -201,8 +201,8 @@ for entity in doc.entities:
 You can create custom annotators by extending the base annotator class:
 
 ```python
-from pytakes.annotators.base import BaseAnnotator
-from pytakes.types import Document, Annotation
+from pyctakes.annotators.base import BaseAnnotator
+from pyctakes.types import Document, Annotation
 
 class CustomAnnotator(BaseAnnotator):
     def __init__(self, **kwargs):

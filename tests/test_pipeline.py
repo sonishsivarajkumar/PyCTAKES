@@ -1,9 +1,9 @@
 """Test the pipeline functionality."""
 
 import pytest
-from pytakes.pipeline import Pipeline
-from pytakes.annotators.base import Annotator
-from pytakes.types import Document, Annotation, Span, AnnotationType
+from pyctakes.pipeline import Pipeline
+from pyctakes.annotators.base import Annotator
+from pyctakes.types import Document, Annotation, Span, AnnotationType
 
 
 class MockAnnotator(Annotator):

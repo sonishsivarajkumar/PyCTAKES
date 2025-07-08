@@ -1,10 +1,10 @@
 # Custom Annotators
 
-Learn how to create and integrate custom annotators into the PyTAKES pipeline.
+Learn how to create and integrate custom annotators into the PyCTAKES pipeline.
 
 ## Overview
 
-PyTAKES provides a flexible architecture for creating custom annotators that can be seamlessly integrated into processing pipelines. Custom annotators allow you to:
+PyCTAKES provides a flexible architecture for creating custom annotators that can be seamlessly integrated into processing pipelines. Custom annotators allow you to:
 
 - Implement domain-specific processing logic
 - Integrate external NLP models or services
@@ -16,8 +16,8 @@ PyTAKES provides a flexible architecture for creating custom annotators that can
 All annotators must extend the `BaseAnnotator` class:
 
 ```python
-from pytakes.annotators.base import BaseAnnotator
-from pytakes.types import Document
+from pyctakes.annotators.base import BaseAnnotator
+from pyctakes.types import Document
 
 class CustomAnnotator(BaseAnnotator):
     def __init__(self, **kwargs):
@@ -35,8 +35,8 @@ Here's a basic custom annotator that identifies phone numbers:
 
 ```python
 import re
-from pytakes.annotators.base import BaseAnnotator
-from pytakes.types import Document, Entity
+from pyctakes.annotators.base import BaseAnnotator
+from pyctakes.types import Document, Entity
 
 class PhoneNumberAnnotator(BaseAnnotator):
     def __init__(self, **kwargs):
@@ -70,8 +70,8 @@ Here's a more sophisticated annotator that integrates with an external API:
 ```python
 import requests
 from typing import Dict, Any
-from pytakes.annotators.base import BaseAnnotator
-from pytakes.types import Document, Entity, UMLSConcept
+from pyctakes.annotators.base import BaseAnnotator
+from pyctakes.types import Document, Entity, UMLSConcept
 
 class ExternalNERAnnotator(BaseAnnotator):
     def __init__(self, api_url: str, api_key: str, **kwargs):
@@ -141,7 +141,7 @@ class ExternalNERAnnotator(BaseAnnotator):
 Add configuration support to your custom annotators:
 
 ```python
-from pytakes.annotators.base import BaseAnnotator
+from pyctakes.annotators.base import BaseAnnotator
 
 class ConfigurableAnnotator(BaseAnnotator):
     def __init__(self, config: Dict[str, Any] = None, **kwargs):
@@ -177,7 +177,7 @@ class ConfigurableAnnotator(BaseAnnotator):
 Implement robust error handling in your annotators:
 
 ```python
-from pytakes.annotators.base import BaseAnnotator, AnnotationError
+from pyctakes.annotators.base import BaseAnnotator, AnnotationError
 
 class RobustAnnotator(BaseAnnotator):
     def process(self, doc: Document) -> Document:
@@ -210,7 +210,7 @@ class RobustAnnotator(BaseAnnotator):
 Create annotators that support multiple languages:
 
 ```python
-from pytakes.annotators.base import BaseAnnotator
+from pyctakes.annotators.base import BaseAnnotator
 
 class MultilingualAnnotator(BaseAnnotator):
     def __init__(self, language: str = "en", **kwargs):
@@ -244,7 +244,7 @@ Optimize your annotators for better performance:
 
 ```python
 from functools import lru_cache
-from pytakes.annotators.base import BaseAnnotator
+from pyctakes.annotators.base import BaseAnnotator
 
 class OptimizedAnnotator(BaseAnnotator):
     def __init__(self, **kwargs):
@@ -285,7 +285,7 @@ Create comprehensive tests for your custom annotators:
 
 ```python
 import pytest
-from pytakes.types import Document
+from pyctakes.types import Document
 from your_module import CustomAnnotator
 
 class TestCustomAnnotator:
@@ -327,7 +327,7 @@ class TestCustomAnnotator:
 Register your custom annotator for use in pipelines:
 
 ```python
-from pytakes.pipeline import Pipeline
+from pyctakes.pipeline import Pipeline
 
 # Method 1: Direct addition
 pipeline = Pipeline()
@@ -357,12 +357,12 @@ Create installable plugins for your annotators:
 from setuptools import setup
 
 setup(
-    name="pytakes-custom-plugin",
+    name="pyctakes-custom-plugin",
     version="1.0.0",
-    packages=["pytakes_custom"],
+    packages=["pyctakes_custom"],
     entry_points={
-        "pytakes.annotators": [
-            "custom = pytakes_custom:CustomAnnotator"
+        "pyctakes.annotators": [
+            "custom = pyctakes_custom:CustomAnnotator"
         ]
     }
 )
@@ -376,7 +376,7 @@ setup(
 4. **Make it configurable**: Support configuration for flexibility
 5. **Test extensively**: Unit tests and integration tests
 6. **Optimize for performance**: Profile and optimize bottlenecks
-7. **Support standard types**: Use PyTAKES type system correctly
+7. **Support standard types**: Use PyCTAKES type system correctly
 8. **Log appropriately**: Use logging for debugging and monitoring
 
 ## Example: Complete Custom Annotator
@@ -385,15 +385,15 @@ Here's a complete example of a well-structured custom annotator:
 
 ```python
 """
-Custom vital signs annotator for PyTAKES.
+Custom vital signs annotator for PyCTAKES.
 """
 import re
 import logging
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 
-from pytakes.annotators.base import BaseAnnotator
-from pytakes.types import Document, Entity
+from pyctakes.annotators.base import BaseAnnotator
+from pyctakes.types import Document, Entity
 
 @dataclass
 class VitalSign:
@@ -564,4 +564,4 @@ class VitalSignsAnnotator(BaseAnnotator):
         return True  # Default to normal if unknown
 ```
 
-This example demonstrates all the best practices for creating robust, configurable, and well-tested custom annotators for PyTAKES.
+This example demonstrates all the best practices for creating robust, configurable, and well-tested custom annotators for PyCTAKES.

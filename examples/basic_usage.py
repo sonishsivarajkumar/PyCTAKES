@@ -1,8 +1,8 @@
-"""Example usage of PyTAKES framework."""
+"""Example usage of PyCTAKES framework."""
 
-from pytakes import Pipeline
-from pytakes.annotators.base import Annotator
-from pytakes.types import (
+from pyctakes import Pipeline
+from pyctakes.annotators.base import Annotator
+from pyctakes.types import (
     Document, Annotation, Span, AnnotationType, 
     EntityType, NamedEntityAnnotation
 )
@@ -72,7 +72,7 @@ class SimpleMedicalNERAnnotator(Annotator):
 
 
 def main():
-    """Demonstrate PyTAKES usage."""
+    """Demonstrate PyCTAKES usage."""
     
     # Sample clinical text
     clinical_text = """
@@ -81,7 +81,7 @@ def main():
     Current medications include metformin and lisinopril.
     """
     
-    print("=== PyTAKES Demo ===")
+    print("=== PyCTAKES Demo ===")
     print(f"Input Text: {clinical_text.strip()}")
     print()
     
