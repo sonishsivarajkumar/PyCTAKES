@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytakes"
-version = "0.1.0"
+version = "1.0.0"
 description = "Python-native clinical NLP framework mirroring Apache cTAKES functionality"
 readme = "README.md"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
 authors = [
     {name = "Sonish Sivarajkumar", email = "sonish@example.com"}
 ]
@@ -16,7 +16,7 @@ maintainers = [
 ]
 keywords = ["nlp", "clinical", "medical", "ctakes", "umls", "healthcare"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Healthcare Industry",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: Apache Software License",
