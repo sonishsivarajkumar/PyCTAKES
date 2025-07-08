@@ -1,0 +1,102 @@
+site_name: PyTAKES Documentation
+site_description: Python-native clinical NLP framework
+site_author: Sonish Sivarajkumar
+site_url: https://sonish777.github.io/pytakes
+
+repo_name: sonish777/pytakes
+repo_url: https://github.com/sonish777/pytakes
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Quick Start: quickstart.md
+    - Examples: examples.md
+  - User Guide:
+    - Pipeline Overview: user-guide/pipeline.md
+    - Annotators: user-guide/annotators.md
+    - Configuration: user-guide/configuration.md
+    - Command Line: user-guide/cli.md
+  - API Reference:
+    - Pipeline: api/pipeline.md
+    - Annotators: api/annotators.md
+    - Types: api/types.md
+  - Advanced:
+    - Custom Annotators: advanced/custom-annotators.md
+    - Performance Tuning: advanced/performance.md
+    - UMLS Integration: advanced/umls.md
+  - Development:
+    - Contributing: contributing.md
+    - Changelog: changelog.md
+    - Roadmap: roadmap.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sonish777/pytakes
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/pytakes/
+
+copyright: Copyright &copy; 2025 Sonish Sivarajkumar

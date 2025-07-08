@@ -1,0 +1,128 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytakes"
+version = "0.1.0"
+description = "Python-native clinical NLP framework mirroring Apache cTAKES functionality"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Sonish Sivarajkumar", email = "sonish@example.com"}
+]
+maintainers = [
+    {name = "Sonish Sivarajkumar", email = "sonish@example.com"}
+]
+keywords = ["nlp", "clinical", "medical", "ctakes", "umls", "healthcare"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Text Processing :: Linguistic",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "spacy>=3.4.0",
+    "stanza>=1.4.0",
+    "transformers>=4.20.0",
+    "torch>=1.12.0",
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "pydantic>=1.9.0",
+    "click>=8.0.0",
+    "fastapi>=0.75.0",
+    "uvicorn>=0.17.0",
+    "langchain>=0.0.100",
+    "flashtext>=2.7",
+    "pyyaml>=6.0",
+    "tqdm>=4.64.0",
+    "requests>=2.28.0",
+    "aiofiles>=0.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "pytest-asyncio>=0.18.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+    "pre-commit>=2.17.0",
+]
+docs = [
+    "sphinx>=4.5.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "sphinx-autodoc-typehints>=1.17.0",
+    "myst-parser>=0.17.0",
+]
+dask = [
+    "dask[complete]>=2022.0.0",
+]
+all = [
+    "pytakes[dev,docs,dask]",
+]
+
+[project.urls]
+Homepage = "https://github.com/sonishsivarajkumar/PyTAKES"
+Documentation = "https://pytakes.readthedocs.io"
+Repository = "https://github.com/sonishsivarajkumar/PyTAKES.git"
+"Bug Tracker" = "https://github.com/sonishsivarajkumar/PyTAKES/issues"
+
+[project.scripts]
+pytakes = "pytakes.cli:main"
+
+[project.entry-points."pytakes.annotators"]
+# Plugin discovery for custom annotators
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=pytakes --cov-report=html --cov-report=term-missing"
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["src/pytakes"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
