@@ -107,3 +107,7 @@ value_sets/
 tmp/
 temp/
 .tmp/
+
+# Documentation builds
+site/
+docs/_build/
