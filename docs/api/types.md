@@ -4,45 +4,87 @@ PyTAKES uses a comprehensive type system to represent clinical text and annotati
 
 ## Core Types
 
-::: pytakes.types.Document
-    options:
-      show_source: false
-      heading_level: 3
+### `class Document`
 
-::: pytakes.types.Annotation
-    options:
-      show_source: false
-      heading_level: 3
+Main document class containing text and all annotations.
 
-::: pytakes.types.Token
-    options:
-      show_source: false
-      heading_level: 3
+**Attributes:**
+- `text` (str): The clinical text content
+- `metadata` (dict): Document metadata
+- `sentences` (List[Sentence]): Sentence annotations
+- `tokens` (List[Token]): Token annotations
+- `entities` (List[Entity]): Entity annotations
+- `sections` (List[Section]): Section annotations
+- `annotations` (List[Annotation]): All annotations
 
-::: pytakes.types.Sentence
-    options:
-      show_source: false
-      heading_level: 3
+**Methods:**
+- `to_json()`: Serialize to JSON
+- `from_json(data)`: Deserialize from JSON
 
-::: pytakes.types.Entity
-    options:
-      show_source: false
-      heading_level: 3
+### `class Annotation`
 
-::: pytakes.types.Section
-    options:
-      show_source: false
-      heading_level: 3
+Base class for all annotations.
 
-::: pytakes.types.Assertion
-    options:
-      show_source: false
-      heading_level: 3
+**Attributes:**
+- `start` (int): Start character position
+- `end` (int): End character position
+- `text` (str): Annotated text span
+- `label` (str): Annotation label/type
+- `confidence` (float): Confidence score (0.0-1.0)
 
-::: pytakes.types.UMLSConcept
-    options:
-      show_source: false
-      heading_level: 3
+### `class Token(Annotation)`
+
+Represents a single token.
+
+**Attributes:**
+- `pos` (str): Part-of-speech tag
+- `lemma` (str): Lemmatized form
+- `is_alpha` (bool): Contains alphabetic characters
+- `is_digit` (bool): Contains only digits
+- `is_punct` (bool): Is punctuation
+
+### `class Sentence(Annotation)`
+
+Represents a sentence with tokens.
+
+**Attributes:**
+- `tokens` (List[Token]): Tokens in the sentence
+
+### `class Entity(Annotation)`
+
+Represents a named entity.
+
+**Attributes:**
+- `assertion` (Assertion): Assertion information
+- `umls_concept` (UMLSConcept): UMLS concept mapping
+
+### `class Section(Annotation)`
+
+Represents a document section.
+
+**Attributes:**
+- `section_type` (str): Type of section
+
+### `class Assertion`
+
+Assertion attributes for entities.
+
+**Attributes:**
+- `polarity` (str): POSITIVE, NEGATIVE
+- `uncertainty` (str): CERTAIN, UNCERTAIN
+- `temporality` (str): PRESENT, PAST, FUTURE
+- `experiencer` (str): PATIENT, FAMILY, OTHER
+
+### `class UMLSConcept`
+
+UMLS concept information.
+
+**Attributes:**
+- `cui` (str): Concept Unique Identifier
+- `preferred_term` (str): Preferred term
+- `semantic_types` (List[str]): Semantic type codes
+- `sources` (List[str]): Source vocabularies
+- `confidence` (float): Mapping confidence
 
 ## Usage Examples
 

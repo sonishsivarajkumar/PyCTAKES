@@ -1,26 +1,68 @@
 # Pipeline API Reference
 
-::: pytakes.pipeline.Pipeline
-    options:
-      show_source: false
-      heading_level: 2
+The PyTAKES pipeline module provides the core functionality for processing clinical text through configurable annotator chains.
+
+## Pipeline Class
+
+### `class Pipeline`
+
+Main pipeline class for clinical text processing.
+
+**Methods:**
+
+- `__init__()`: Initialize empty pipeline
+- `add_annotator(annotator)`: Add annotator to pipeline
+- `process_text(text)`: Process single text string
+- `process_batch(texts)`: Process multiple texts
+- `from_config(config)`: Create pipeline from configuration
 
 ## Pipeline Factory Functions
 
-::: pytakes.pipeline.create_default_pipeline
-    options:
-      show_source: false
-      heading_level: 3
+### `create_default_pipeline(config=None)`
 
-::: pytakes.pipeline.create_fast_pipeline
-    options:
-      show_source: false
-      heading_level: 3
+Create default clinical NLP pipeline with all annotators.
 
-::: pytakes.pipeline.create_basic_pipeline
-    options:
-      show_source: false
-      heading_level: 3
+**Parameters:**
+- `config` (dict, optional): Configuration dictionary
+
+**Returns:**
+- `Pipeline`: Configured pipeline instance
+
+**Includes:**
+- Tokenization (spaCy backend)
+- Section detection
+- Named entity recognition
+- Assertion detection
+- UMLS concept mapping
+
+### `create_fast_pipeline(config=None)`
+
+Create speed-optimized pipeline with rule-based components.
+
+**Parameters:**
+- `config` (dict, optional): Configuration dictionary
+
+**Returns:**
+- `Pipeline`: Configured pipeline instance
+
+**Includes:**
+- Tokenization (rule-based)
+- Named entity recognition (rule-based)
+- Basic assertion detection
+
+### `create_basic_pipeline(config=None)`
+
+Create minimal pipeline for simple entity extraction.
+
+**Parameters:**
+- `config` (dict, optional): Configuration dictionary
+
+**Returns:**
+- `Pipeline`: Configured pipeline instance
+
+**Includes:**
+- Tokenization (rule-based)
+- Named entity recognition (rule-based)
 
 ## Usage Examples
 

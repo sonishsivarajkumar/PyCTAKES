@@ -1,86 +1,141 @@
 # Annotators API Reference
 
+PyTAKES provides a comprehensive set of annotators for clinical natural language processing.
+
 ## Base Annotator
 
-::: pytakes.annotators.base.BaseAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+### `class BaseAnnotator`
+
+Abstract base class for all PyTAKES annotators.
+
+**Methods:**
+- `__init__()`: Initialize annotator
+- `process(doc)`: Process document and return annotated document
 
 ## Tokenization
 
-::: pytakes.annotators.tokenization.TokenizationAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+### `class TokenizationAnnotator(BaseAnnotator)`
 
-::: pytakes.annotators.tokenization.ClinicalSentenceSegmenter
-    options:
-      show_source: false
-      heading_level: 3
+Handles sentence segmentation and tokenization of clinical text.
 
-::: pytakes.annotators.tokenization.ClinicalTokenizer
-    options:
-      show_source: false
-      heading_level: 3
+**Parameters:**
+- `backend` (str): Backend to use ("spacy", "stanza", "rule_based")
+- `model` (str): Model name for spacy/stanza backends
+
+**Methods:**
+- `process(doc)`: Add sentences and tokens to document
+
+### `class ClinicalSentenceSegmenter`
+
+Clinical-aware sentence segmentation.
+
+**Features:**
+- Respects medical abbreviations
+- Handles clinical note formatting
+- Configurable sentence boundary detection
+
+### `class ClinicalTokenizer`
+
+Advanced tokenization for clinical text.
+
+**Features:**
+- POS tagging and lemmatization
+- Clinical pattern recognition
+- Multiple backend support
 
 ## Section Detection
 
-::: pytakes.annotators.sections.SectionAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+### `class SectionAnnotator(BaseAnnotator)`
 
-::: pytakes.annotators.sections.ClinicalSectionAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+Base class for section detection.
+
+### `class ClinicalSectionAnnotator(SectionAnnotator)`
+
+Identifies clinical document sections.
+
+**Detected Sections:**
+- Chief Complaint
+- History of Present Illness
+- Past Medical History
+- Medications
+- Physical Examination
+- Assessment and Plan
 
 ## Named Entity Recognition
 
-::: pytakes.annotators.ner.NERAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+### `class NERAnnotator(BaseAnnotator)`
 
-::: pytakes.annotators.ner.ClinicalNERAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+Base class for named entity recognition.
 
-::: pytakes.annotators.ner.SimpleClinicalNER
-    options:
-      show_source: false
-      heading_level: 3
+### `class ClinicalNERAnnotator(NERAnnotator)`
+
+Clinical entity recognition with hybrid approach.
+
+**Parameters:**
+- `approach` (str): "rule_based" or "model_based"
+- `model_name` (str): Model for model-based approach
+- `custom_patterns` (dict): Custom entity patterns
+
+**Entity Types:**
+- MEDICATION
+- CONDITION
+- SYMPTOM
+- ANATOMY
+- PROCEDURE
+- TEST_RESULT
+
+### `class SimpleClinicalNER(NERAnnotator)`
+
+Fast pattern-based entity recognition.
+
+**Features:**
+- High-speed processing
+- Pattern matching
+- Optimized for speed over accuracy
 
 ## Assertion Detection
 
-::: pytakes.annotators.assertion.AssertionAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+### `class AssertionAnnotator(BaseAnnotator)`
 
-::: pytakes.annotators.assertion.NegationAssertionAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+Base class for assertion detection.
+
+### `class NegationAssertionAnnotator(AssertionAnnotator)`
+
+pyConText-style assertion and negation detection.
+
+**Parameters:**
+- `window_size` (int): Context window size
+- `custom_negation_terms` (list): Additional negation terms
+- `custom_uncertainty_terms` (list): Additional uncertainty terms
+
+**Assertion Types:**
+- Polarity: POSITIVE, NEGATIVE
+- Uncertainty: CERTAIN, UNCERTAIN
+- Temporality: PRESENT, PAST, FUTURE
+- Experiencer: PATIENT, FAMILY, OTHER
 
 ## UMLS Concept Mapping
 
-::: pytakes.annotators.umls.UMLSAnnotator
-    options:
-      show_source: false
-      heading_level: 3
+### `class UMLSAnnotator(BaseAnnotator)`
 
-::: pytakes.annotators.umls.UMLSConceptMapper
-    options:
-      show_source: false
-      heading_level: 3
+Base class for UMLS concept mapping.
 
-::: pytakes.annotators.umls.SimpleDictionaryMapper
-    options:
-      show_source: false
-      heading_level: 3
+### `class UMLSConceptMapper(UMLSAnnotator)`
+
+Maps entities to UMLS concepts.
+
+**Parameters:**
+- `umls_path` (str): Path to UMLS data
+- `similarity_threshold` (float): Minimum similarity score
+- `max_candidates` (int): Maximum candidate concepts
+
+### `class SimpleDictionaryMapper(UMLSAnnotator)`
+
+Fast dictionary-based concept mapping.
+
+**Parameters:**
+- `dictionary_path` (str): Path to concept dictionary
+- `similarity_threshold` (float): Minimum similarity score
 
 ## Usage Examples
 
