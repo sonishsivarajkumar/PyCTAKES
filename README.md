@@ -1,4 +1,4 @@
-# pyCTAKES
+# PyCTAKES
 ## Open Source Python-native Clinical NLP Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -14,7 +14,7 @@
 
 ---
 
-## Why Choose pyCTAKES?
+## Why Choose PyCTAKES?
 
 <table>
 <tr>
