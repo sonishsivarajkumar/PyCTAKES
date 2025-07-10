@@ -10,7 +10,7 @@
 
 > **A modern, open source clinical NLP framework** that mirrors and extends Apache cTAKES functionality in pure Python. Drop-in replacement with superior usability, extensibility, and performance.
 
-**pyCTAKES** transforms clinical text processing by providing a **100% open source**, Python-native alternative to Apache cTAKES. Built by the community, for the community - no vendor lock-in, no licensing fees, just powerful clinical NLP tools that anyone can use, modify, and contribute to.
+**PyCTAKES** transforms clinical text processing by providing a **100% open source**, Python-native alternative to Apache cTAKES. Built by the community, for the community - no vendor lock-in, no licensing fees, just powerful clinical NLP tools that anyone can use, modify, and contribute to.
 
 ---
 
