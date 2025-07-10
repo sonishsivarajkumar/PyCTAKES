@@ -1,10 +1,10 @@
 # Quick Start Tutorial
 
-This tutorial will get you up and running with PyCTAKES in just a few minutes.
+This tutorial will get you up and running with pyCTAKES in just a few minutes.
 
 ## Step 1: Installation
 
-First, install PyCTAKES:
+First, install pyCTAKES:
 
 ```bash
 pip install pyctakes
@@ -52,7 +52,7 @@ print(f"Total annotations: {len(result.document.annotations)}")
 
 ## Step 3: Exploring Annotations
 
-PyCTAKES produces different types of annotations. Let's examine them:
+pyCTAKES produces different types of annotations. Let's examine them:
 
 ```python
 from pyctakes.types import AnnotationType
@@ -101,7 +101,7 @@ for section in sections:
 
 ## Step 4: Different Pipeline Types
 
-PyCTAKES offers multiple pipeline configurations:
+pyCTAKES offers multiple pipeline configurations:
 
 ### Fast Pipeline
 
@@ -150,7 +150,7 @@ custom_result = custom_pipeline.process_text(clinical_text)
 
 ## Step 5: Command Line Usage
 
-PyCTAKES also provides a command-line interface:
+pyCTAKES also provides a command-line interface:
 
 ```bash
 # Save sample text to file
@@ -332,4 +332,4 @@ print(f"Wall clock time: {end_time - start_time:.3f}s")
 print(f"Annotations per second: {len(result.document.annotations)/result.processing_time:.1f}")
 ```
 
-You're now ready to use PyCTAKES for your clinical NLP projects!
+You're now ready to use pyCTAKES for your clinical NLP projects!

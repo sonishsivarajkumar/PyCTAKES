@@ -1,4 +1,4 @@
-name: PyCTAKES CI/CD
+name: pyCTAKES CI/CD
 
 on:
   push:

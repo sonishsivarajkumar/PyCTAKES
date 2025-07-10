@@ -1,6 +1,6 @@
 # Types API Reference
 
-PyCTAKES uses a comprehensive type system to represent clinical text and annotations.
+pyCTAKES uses a comprehensive type system to represent clinical text and annotations.
 
 ## Core Types
 
@@ -226,7 +226,7 @@ Annotation (base)
 
 ### Entity Types
 
-Common entity labels used in PyCTAKES:
+Common entity labels used in pyCTAKES:
 
 - **MEDICATION**: Drugs and medications
 - **DOSAGE**: Medication dosages
@@ -340,7 +340,7 @@ Example JSON output:
 
 ## Type Validation
 
-PyCTAKES includes validation for type safety:
+pyCTAKES includes validation for type safety:
 
 ```python
 from pyctakes.types import Document, ValidationError

@@ -1,10 +1,10 @@
 # Configuration
 
-PyCTAKES provides flexible configuration options to customize the behavior of annotators and pipelines.
+pyCTAKES provides flexible configuration options to customize the behavior of annotators and pipelines.
 
 ## Configuration File Format
 
-PyCTAKES uses JSON configuration files:
+pyCTAKES uses JSON configuration files:
 
 ```json
 {
@@ -211,7 +211,7 @@ PyCTAKES uses JSON configuration files:
 
 ## Environment Variables
 
-PyCTAKES recognizes these environment variables:
+pyCTAKES recognizes these environment variables:
 
 ```bash
 # UMLS API Key (required for full UMLS functionality)
@@ -268,7 +268,7 @@ pipeline.add_annotator(NERAnnotator(approach="rule_based"))
 
 ## Configuration Validation
 
-PyCTAKES validates configuration on load:
+pyCTAKES validates configuration on load:
 
 ```python
 try:

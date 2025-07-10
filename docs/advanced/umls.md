@@ -1,10 +1,10 @@
 # UMLS Integration
 
-Comprehensive guide to integrating PyCTAKES with the Unified Medical Language System (UMLS).
+Comprehensive guide to integrating pyCTAKES with the Unified Medical Language System (UMLS).
 
 ## Overview
 
-The Unified Medical Language System (UMLS) is a comprehensive set of files and software that brings together biomedical vocabularies and standards to enable interoperability between systems. PyCTAKES provides flexible UMLS integration for concept normalization and mapping.
+The Unified Medical Language System (UMLS) is a comprehensive set of files and software that brings together biomedical vocabularies and standards to enable interoperability between systems. pyCTAKES provides flexible UMLS integration for concept normalization and mapping.
 
 ## UMLS Components
 
@@ -73,7 +73,7 @@ umls_dict = {
 }
 ```
 
-## PyCTAKES UMLS Integration
+## pyCTAKES UMLS Integration
 
 ### Basic UMLS Annotator
 

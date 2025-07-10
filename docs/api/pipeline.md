@@ -1,6 +1,6 @@
 # Pipeline API Reference
 
-The PyCTAKES pipeline module provides the core functionality for processing clinical text through configurable annotator chains.
+The pyCTAKES pipeline module provides the core functionality for processing clinical text through configurable annotator chains.
 
 ## Pipeline Class
 
@@ -140,7 +140,7 @@ for i, result in enumerate(results):
 Add an annotator to the pipeline.
 
 **Parameters:**
-- `annotator`: An instance of a PyCTAKES annotator
+- `annotator`: An instance of a pyCTAKES annotator
 
 **Example:**
 ```python

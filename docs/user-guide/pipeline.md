@@ -1,6 +1,6 @@
 # Pipeline Overview
 
-PyCTAKES uses a pipeline-based architecture where clinical text flows through a series of annotators, each adding specific types of annotations.
+pyCTAKES uses a pipeline-based architecture where clinical text flows through a series of annotators, each adding specific types of annotations.
 
 ## Pipeline Architecture
 
@@ -21,7 +21,7 @@ graph TB
 
 ## Pipeline Types
 
-PyCTAKES provides three pre-configured pipeline types to suit different needs:
+pyCTAKES provides three pre-configured pipeline types to suit different needs:
 
 ### Default Pipeline
 
@@ -313,4 +313,4 @@ pipeline = pyctakes.create_default_pipeline(loaded_config)
 
 - **[Annotators Guide](annotators.md)** - Deep dive into individual annotators
 - **[Configuration](configuration.md)** - Advanced configuration options
-- **[Command Line Interface](cli.md)** - Using PyCTAKES from the command line
+- **[Command Line Interface](cli.md)** - Using pyCTAKES from the command line

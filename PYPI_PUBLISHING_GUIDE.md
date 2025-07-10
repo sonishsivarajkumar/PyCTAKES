@@ -1,4 +1,4 @@
-# 🚀 PyCTAKES PyPI Publishing Guide
+# 🚀 pyCTAKES PyPI Publishing Guide
 
 ## ✅ Package Ready for Upload!
 
@@ -18,7 +18,7 @@ Your package has been successfully built and validated:
 
 **Method 1: Direct Upload (Easiest)**
 ```bash
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload dist/*
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload dist/*
 ```
 - Enter username: `sonish`
 - Enter password: (your PyPI password)
@@ -27,7 +27,7 @@ Your package has been successfully built and validated:
 1. Create API token at https://pypi.org/manage/account/token/
 2. Upload with token:
 ```bash
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload dist/* -u __token__ -p pypi-your-token-here
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload dist/* -u __token__ -p pypi-your-token-here
 ```
 
 ### 3. Test Upload First (Recommended)
@@ -35,7 +35,7 @@ Your package has been successfully built and validated:
 **Upload to TestPyPI first:**
 ```bash
 # Register at https://test.pypi.org/account/register/
-"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pytakes/.venv/bin/python" -m twine upload --repository testpypi dist/*
+"/Users/sonishsivarajkumar/Library/Mobile Documents/com~apple~CloudDocs/Personal/code/pyctakes/.venv/bin/python" -m twine upload --repository testpypi dist/*
 ```
 
 **Test installation:**

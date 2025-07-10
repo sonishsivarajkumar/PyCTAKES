@@ -2,7 +2,7 @@
 
 ## Requirements
 
-PyCTAKES requires Python 3.8 or higher and is tested on:
+pyCTAKES requires Python 3.8 or higher and is tested on:
 
 - Python 3.8, 3.9, 3.10, 3.11, 3.12
 - Linux, macOS, and Windows
@@ -15,7 +15,7 @@ PyCTAKES requires Python 3.8 or higher and is tested on:
 pip install pyctakes
 ```
 
-This installs PyCTAKES with basic dependencies for rule-based processing.
+This installs pyCTAKES with basic dependencies for rule-based processing.
 
 ### Development Installation
 
@@ -27,7 +27,7 @@ pip install git+https://github.com/sonish777/pyctakes.git
 
 ## Optional Dependencies
 
-PyCTAKES supports multiple NLP backends. Install additional packages for enhanced functionality:
+pyCTAKES supports multiple NLP backends. Install additional packages for enhanced functionality:
 
 ### spaCy (Recommended)
 
@@ -91,7 +91,7 @@ print(f"Found {len(result.document.annotations)} annotations")
 
 ## Docker Installation
 
-Run PyCTAKES in Docker:
+Run pyCTAKES in Docker:
 
 ```bash
 # Pull the image

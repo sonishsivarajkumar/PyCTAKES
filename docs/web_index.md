@@ -1,6 +1,6 @@
-# PyCTAKES
+# pyCTAKES
 
-![PyCTAKES Logo](https://img.shields.io/badge/PyCTAKES-Clinical%20NLP-teal?style=for-the-badge)
+![pyCTAKES Logo](https://img.shields.io/badge/pyCTAKES-Clinical%20NLP-teal?style=for-the-badge)
 
 **Python-native clinical NLP framework that mirrors and extends Apache cTAKES**
 
@@ -13,9 +13,9 @@
 
 ---
 
-## 🏥 What is PyCTAKES?
+## 🏥 What is pyCTAKES?
 
-PyCTAKES is a comprehensive, modern clinical Natural Language Processing framework built entirely in Python. It provides end-to-end clinical text processing capabilities that match and extend Apache cTAKES functionality while being easier to install, use, and extend.
+pyCTAKES is a comprehensive, modern clinical Natural Language Processing framework built entirely in Python. It provides end-to-end clinical text processing capabilities that match and extend Apache cTAKES functionality while being easier to install, use, and extend.
 
 ## ✨ Key Features
 
@@ -95,7 +95,7 @@ pyctakes batch-process ./clinical_notes/ --output ./annotations/
 
 ## 🏗️ Architecture
 
-PyCTAKES follows a modular, pipeline-based architecture:
+pyCTAKES follows a modular, pipeline-based architecture:
 
 ```mermaid
 graph LR
@@ -118,7 +118,7 @@ graph LR
 
 ## 🔧 Configuration
 
-PyCTAKES is highly configurable via JSON configuration files:
+pyCTAKES is highly configurable via JSON configuration files:
 
 ```json
 {
@@ -180,11 +180,11 @@ PyCTAKES is highly configurable via JSON configuration files:
 
 ## 📄 License
 
-PyCTAKES is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
+pyCTAKES is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-PyCTAKES is inspired by [Apache cTAKES](https://ctakes.apache.org/) and builds upon the excellent work of the clinical NLP community. Special thanks to the developers of spaCy, scispaCy, and other open-source libraries that make this project possible.
+pyCTAKES is inspired by [Apache cTAKES](https://ctakes.apache.org/) and builds upon the excellent work of the clinical NLP community. Special thanks to the developers of spaCy, scispaCy, and other open-source libraries that make this project possible.
 
 ---
 

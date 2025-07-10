@@ -1,6 +1,6 @@
-# PyCTAKES
+# pyCTAKES
 
-![PyCTAKES Logo](https://img.shields.io/badge/PyCTAKES-Clinical%20NLP-teal?style=for-the-badge)
+![pyCTAKES Logo](https://img.shields.io/badge/pyCTAKES-Clinical%20NLP-teal?style=for-the-badge)
 
 **Python-native clinical NLP framework that mirrors and extends Apache cTAKES**
 
@@ -12,9 +12,9 @@
 
 ---
 
-## 🏥 What is PyCTAKES?
+## 🏥 What is pyCTAKES?
 
-PyCTAKES is a comprehensive, modern clinical Natural Language Processing framework built entirely in Python. It provides end-to-end clinical text processing capabilities that match and extend Apache cTAKES functionality while being easier to install, use, and extend.
+pyCTAKES is a comprehensive, modern clinical Natural Language Processing framework built entirely in Python. It provides end-to-end clinical text processing capabilities that match and extend Apache cTAKES functionality while being easier to install, use, and extend.
 
 ## ✨ Key Features
 
@@ -91,7 +91,7 @@ pyctakes annotate clinical_note.txt --pipeline fast --format text
 
 ## 🏗️ Architecture
 
-PyCTAKES follows a modular, pipeline-based architecture:
+pyCTAKES follows a modular, pipeline-based architecture:
 
 ```mermaid
 graph LR
@@ -153,17 +153,17 @@ graph LR
 
 ## 📄 License
 
-PyCTAKES is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
+pyCTAKES is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-PyCTAKES is inspired by [Apache cTAKES](https://ctakes.apache.org/) and builds upon the excellent work of the clinical NLP community. Special thanks to the developers of spaCy, scispaCy, and other open-source libraries that make this project possible.
+pyCTAKES is inspired by [Apache cTAKES](https://ctakes.apache.org/) and builds upon the excellent work of the clinical NLP community. Special thanks to the developers of spaCy, scispaCy, and other open-source libraries that make this project possible.
 
 ---
 
 **Ready to get started?** Check out our [Quick Start Guide](quickstart.md) or explore the [Examples](examples.md)!
 
-PyCTAKES is an entirely Python-based clinical NLP framework that mirrors and extends Apache cTAKES' rich functionality, while delivering an easy-to-install, easy-to-use package on PyPI.
+pyCTAKES is an entirely Python-based clinical NLP framework that mirrors and extends Apache cTAKES' rich functionality, while delivering an easy-to-install, easy-to-use package on PyPI.
 
 ### Key Features
 

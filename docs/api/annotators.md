@@ -1,12 +1,12 @@
 # Annotators API Reference
 
-PyCTAKES provides a comprehensive set of annotators for clinical natural language processing.
+pyCTAKES provides a comprehensive set of annotators for clinical natural language processing.
 
 ## Base Annotator
 
 ### `class BaseAnnotator`
 
-Abstract base class for all PyCTAKES annotators.
+Abstract base class for all pyCTAKES annotators.
 
 **Methods:**
 - `__init__()`: Initialize annotator

@@ -1,10 +1,10 @@
-# 🎉 PyCTAKES v1.0 - Public Release Announcement
+# 🎉 pyCTAKES v1.0 - Public Release Announcement
 
-We're excited to announce the public release of **PyCTAKES v1.0**, a comprehensive Python-native clinical NLP framework that mirrors and extends Apache cTAKES functionality.
+We're excited to announce the public release of **pyCTAKES v1.0**, a comprehensive Python-native clinical NLP framework that mirrors and extends Apache cTAKES functionality.
 
-## 🚀 What is PyCTAKES?
+## 🚀 What is pyCTAKES?
 
-PyCTAKES is a modern, pure-Python clinical natural language processing framework designed to:
+pyCTAKES is a modern, pure-Python clinical natural language processing framework designed to:
 
 - **Replace Apache cTAKES** with simpler deployment (no Java required)
 - **Process clinical text** with state-of-the-art accuracy and performance
@@ -90,7 +90,7 @@ Our documentation includes:
 - **Advanced Topics**: Custom annotators, performance tuning, UMLS integration
 - **Examples**: Real-world usage examples and configurations
 
-**🔗 Documentation**: [https://sonishsivarajkumar.github.io/PyCTAKES](https://sonishsivarajkumar.github.io/PyCTAKES)
+**🔗 Documentation**: [https://sonishsivarajkumar.github.io/pyCTAKES](https://sonishsivarajkumar.github.io/pyCTAKES)
 
 ## 🌟 Highlights
 
@@ -114,14 +114,14 @@ Our documentation includes:
 
 ## 🔗 Links
 
-- **GitHub**: [https://github.com/sonishsivarajkumar/PyCTAKES](https://github.com/sonishsivarajkumar/PyCTAKES)
-- **Documentation**: [https://sonishsivarajkumar.github.io/PyCTAKES](https://sonishsivarajkumar.github.io/PyCTAKES)
+- **GitHub**: [https://github.com/sonishsivarajkumar/pyCTAKES](https://github.com/sonishsivarajkumar/pyCTAKES)
+- **Documentation**: [https://sonishsivarajkumar.github.io/pyCTAKES](https://sonishsivarajkumar.github.io/pyCTAKES)
 - **PyPI Package**: [https://pypi.org/project/pyctakes/](https://pypi.org/project/pyctakes/) *(coming soon)*
-- **Examples**: [GitHub Examples](https://github.com/sonishsivarajkumar/PyCTAKES/tree/main/examples)
+- **Examples**: [GitHub Examples](https://github.com/sonishsivarajkumar/pyCTAKES/tree/main/examples)
 
 ## 🤝 Contributing
 
-PyCTAKES is open source and welcomes contributions! Whether you want to:
+pyCTAKES is open source and welcomes contributions! Whether you want to:
 
 - Report bugs or request features
 - Contribute code improvements
@@ -129,7 +129,7 @@ PyCTAKES is open source and welcomes contributions! Whether you want to:
 - Improve documentation
 - Share use cases and examples
 
-Check out our [Contributing Guide](https://sonishsivarajkumar.github.io/PyCTAKES/contributing/) to get started.
+Check out our [Contributing Guide](https://sonishsivarajkumar.github.io/pyCTAKES/contributing/) to get started.
 
 ## 🗺 Roadmap
 
@@ -144,14 +144,14 @@ While v1.0 delivers comprehensive clinical NLP capabilities, we're already plann
 
 ## 📄 License
 
-PyCTAKES is released under the MIT License, making it free for both academic and commercial use.
+pyCTAKES is released under the MIT License, making it free for both academic and commercial use.
 
 ## 🙏 Acknowledgments
 
-PyCTAKES builds upon the excellent work of the Apache cTAKES project and the broader clinical NLP community. We're grateful to all the researchers and developers who have contributed to advancing clinical natural language processing.
+pyCTAKES builds upon the excellent work of the Apache cTAKES project and the broader clinical NLP community. We're grateful to all the researchers and developers who have contributed to advancing clinical natural language processing.
 
 ---
 
-**Ready to revolutionize your clinical text processing? Try PyCTAKES today!** 🚀
+**Ready to revolutionize your clinical text processing? Try pyCTAKES today!** 🚀
 
-*For questions, support, or discussions, please use our [GitHub Discussions](https://github.com/sonishsivarajkumar/PyCTAKES/discussions) or open an [issue](https://github.com/sonishsivarajkumar/PyCTAKES/issues).*
+*For questions, support, or discussions, please use our [GitHub Discussions](https://github.com/sonishsivarajkumar/pyCTAKES/discussions) or open an [issue](https://github.com/sonishsivarajkumar/pyCTAKES/issues).*

@@ -1,4 +1,4 @@
-"""Test configuration for PyCTAKES."""
+"""Test configuration for pyCTAKES."""
 
 import pytest
 from pyctakes.types import Document, Span, Annotation, AnnotationType

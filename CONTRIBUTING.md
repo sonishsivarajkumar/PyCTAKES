@@ -1,6 +1,6 @@
-# Contributing to PyCTAKES
+# Contributing to pyCTAKES
 
-We welcome contributions to PyCTAKES! This document provides guidelines for contributing to the project.
+We welcome contributions to pyCTAKES! This document provides guidelines for contributing to the project.
 
 ## Code of Conduct
 
@@ -13,8 +13,8 @@ This project adheres to a code of conduct that we expect all contributors to fol
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/your-username/PyCTAKES.git
-   cd PyCTAKES
+   git clone https://github.com/your-username/pyCTAKES.git
+   cd pyCTAKES
    ```
 
 3. Create a virtual environment:
@@ -109,7 +109,7 @@ Feature requests are welcome! Please include:
 
 ### Writing Annotators
 
-PyCTAKES is designed to be extensible through custom annotators. When contributing new annotators:
+pyCTAKES is designed to be extensible through custom annotators. When contributing new annotators:
 
 1. Inherit from `pyctakes.annotators.base.Annotator`
 2. Implement required methods (`initialize`, `annotate`)
@@ -191,4 +191,4 @@ Contributors are recognized in:
 - Release notes
 - Project documentation
 
-Thank you for contributing to PyCTAKES!
+Thank you for contributing to pyCTAKES!

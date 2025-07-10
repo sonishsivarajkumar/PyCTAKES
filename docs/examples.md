@@ -1,6 +1,6 @@
 # Examples
 
-This page provides comprehensive examples of using PyCTAKES for various clinical NLP tasks.
+This page provides comprehensive examples of using pyCTAKES for various clinical NLP tasks.
 
 ## Basic Examples
 
@@ -608,4 +608,4 @@ annotations_df = annotate_dataframe(clinical_df)
 print(annotations_df)
 ```
 
-These examples demonstrate the versatility and power of PyCTAKES for various clinical NLP tasks. Start with the basic examples and gradually work your way up to more complex use cases.
+These examples demonstrate the versatility and power of pyCTAKES for various clinical NLP tasks. Start with the basic examples and gradually work your way up to more complex use cases.

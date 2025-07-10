@@ -1,6 +1,6 @@
 # Annotators
 
-PyCTAKES provides a comprehensive set of annotators for clinical natural language processing. Each annotator specializes in extracting specific types of information from clinical text.
+pyCTAKES provides a comprehensive set of annotators for clinical natural language processing. Each annotator specializes in extracting specific types of information from clinical text.
 
 ## Available Annotators
 

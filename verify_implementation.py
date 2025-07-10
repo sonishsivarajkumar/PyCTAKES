@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Quick verification script for PyCTAKES v1.0 features."""
+"""Quick verification script for pyCTAKES v1.0 features."""
 
 import sys
 import pyctakes
@@ -7,7 +7,7 @@ from pyctakes.types import AnnotationType
 
 def test_basic_functionality():
     """Test basic functionality."""
-    print("🧪 Testing PyCTAKES v1.0 Implementation...")
+    print("🧪 Testing pyCTAKES v1.0 Implementation...")
     
     # Test text
     clinical_text = """
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     try:
         success = test_basic_functionality()
         if success:
-            print("\n✅ PyCTAKES v1.0 implementation is working correctly!")
+            print("\n✅ pyCTAKES v1.0 implementation is working correctly!")
             sys.exit(0)
         else:
             print("\n❌ Some tests failed!")

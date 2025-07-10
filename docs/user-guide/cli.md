@@ -1,6 +1,6 @@
 # Command Line Interface
 
-PyCTAKES provides a comprehensive command-line interface for processing clinical text without writing code.
+pyCTAKES provides a comprehensive command-line interface for processing clinical text without writing code.
 
 ## Basic Usage
 
@@ -22,7 +22,7 @@ pyctakes process input.txt --config my_config.json
 
 ### process
 
-Process clinical text files through the PyCTAKES pipeline.
+Process clinical text files through the pyCTAKES pipeline.
 
 ```bash
 pyctakes process [OPTIONS] INPUT_FILES...
@@ -88,7 +88,7 @@ pyctakes configure --validate my_config.json
 
 ### info
 
-Display information about PyCTAKES installation and capabilities.
+Display information about pyCTAKES installation and capabilities.
 
 ```bash
 pyctakes info [OPTIONS]

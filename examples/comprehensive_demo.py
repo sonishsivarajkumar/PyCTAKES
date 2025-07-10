@@ -1,4 +1,4 @@
-"""Comprehensive example demonstrating PyCTAKES clinical NLP capabilities."""
+"""Comprehensive example demonstrating pyCTAKES clinical NLP capabilities."""
 
 import pyctakes
 from pyctakes.types import Document, AnnotationType
@@ -195,7 +195,7 @@ def main():
     demo_custom_pipeline()
     demo_section_detection()
     
-    print("\n=== PyCTAKES Demo Complete ===")
+    print("\n=== pyCTAKES Demo Complete ===")
     print("Try running with: python -m pyctakes.cli annotate <text_file>")
 
 

@@ -1,5 +1,5 @@
 """
-PyCTAKES: Python-native clinical NLP framework.
+pyCTAKES: Python-native clinical NLP framework.
 
 A comprehensive clinical text processing pipeline that mirrors and extends
 Apache cTAKES functionality with modern Python tooling.

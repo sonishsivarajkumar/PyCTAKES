@@ -1,4 +1,4 @@
-"""Example usage of PyCTAKES framework."""
+"""Example usage of pyCTAKES framework."""
 
 from pyctakes import Pipeline
 from pyctakes.annotators.base import Annotator
@@ -72,7 +72,7 @@ class SimpleMedicalNERAnnotator(Annotator):
 
 
 def main():
-    """Demonstrate PyCTAKES usage."""
+    """Demonstrate pyCTAKES usage."""
     
     # Sample clinical text
     clinical_text = """
@@ -81,7 +81,7 @@ def main():
     Current medications include metformin and lisinopril.
     """
     
-    print("=== PyCTAKES Demo ===")
+    print("=== pyCTAKES Demo ===")
     print(f"Input Text: {clinical_text.strip()}")
     print()
     

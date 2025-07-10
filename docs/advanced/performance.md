@@ -1,10 +1,10 @@
 # Performance Tuning
 
-Optimize PyCTAKES performance for production workloads and large-scale processing.
+Optimize pyCTAKES performance for production workloads and large-scale processing.
 
 ## Performance Overview
 
-PyCTAKES performance depends on several factors:
+pyCTAKES performance depends on several factors:
 - **Pipeline configuration**: Choice of annotators and backends
 - **Text characteristics**: Length, complexity, clinical content density
 - **Hardware resources**: CPU, memory, disk I/O
@@ -401,7 +401,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PyCTAKES
+# Install pyCTAKES
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 

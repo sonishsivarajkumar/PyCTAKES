@@ -1,6 +1,6 @@
-# Contributing to PyCTAKES
+# Contributing to pyCTAKES
 
-Thank you for your interest in contributing to PyCTAKES! This guide will help you get started with contributing to the project.
+Thank you for your interest in contributing to pyCTAKES! This guide will help you get started with contributing to the project.
 
 ## Development Setup
 
@@ -62,7 +62,7 @@ git push origin feature/your-feature-name
 
 ### Code Style and Quality
 
-PyCTAKES uses several tools to maintain code quality:
+pyCTAKES uses several tools to maintain code quality:
 
 - **Black**: Code formatting
 - **isort**: Import sorting
@@ -259,7 +259,7 @@ def create_annotator_from_config(config: Dict[str, Any]) -> BaseAnnotator:
 Use consistent error handling:
 
 ```python
-from pyctakes.exceptions import PyCTAKESError, AnnotationError
+from pyctakes.exceptions import pyCTAKESError, AnnotationError
 
 class CustomAnnotator(BaseAnnotator):
     def process(self, doc: Document) -> Document:
@@ -283,7 +283,7 @@ def process_clinical_text(text: str, pipeline: Pipeline) -> Document:
     
     Args:
         text: Clinical text to process
-        pipeline: PyCTAKES pipeline instance
+        pipeline: pyCTAKES pipeline instance
         
     Returns:
         Processed document with annotations
@@ -403,7 +403,7 @@ Brief description of changes
 
 ### Version Numbering
 
-PyCTAKES follows semantic versioning:
+pyCTAKES follows semantic versioning:
 - **Major**: Breaking changes (1.0.0 → 2.0.0)
 - **Minor**: New features (1.0.0 → 1.1.0)
 - **Patch**: Bug fixes (1.0.0 → 1.0.1)
@@ -454,4 +454,4 @@ Contributors will be recognized in:
 - Release notes
 - Documentation credits
 
-Thank you for contributing to PyCTAKES! 🎉
+Thank you for contributing to pyCTAKES! 🎉

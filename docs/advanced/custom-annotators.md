@@ -1,10 +1,10 @@
 # Custom Annotators
 
-Learn how to create and integrate custom annotators into the PyCTAKES pipeline.
+Learn how to create and integrate custom annotators into the pyCTAKES pipeline.
 
 ## Overview
 
-PyCTAKES provides a flexible architecture for creating custom annotators that can be seamlessly integrated into processing pipelines. Custom annotators allow you to:
+pyCTAKES provides a flexible architecture for creating custom annotators that can be seamlessly integrated into processing pipelines. Custom annotators allow you to:
 
 - Implement domain-specific processing logic
 - Integrate external NLP models or services
@@ -376,7 +376,7 @@ setup(
 4. **Make it configurable**: Support configuration for flexibility
 5. **Test extensively**: Unit tests and integration tests
 6. **Optimize for performance**: Profile and optimize bottlenecks
-7. **Support standard types**: Use PyCTAKES type system correctly
+7. **Support standard types**: Use pyCTAKES type system correctly
 8. **Log appropriately**: Use logging for debugging and monitoring
 
 ## Example: Complete Custom Annotator
@@ -385,7 +385,7 @@ Here's a complete example of a well-structured custom annotator:
 
 ```python
 """
-Custom vital signs annotator for PyCTAKES.
+Custom vital signs annotator for pyCTAKES.
 """
 import re
 import logging
@@ -564,4 +564,4 @@ class VitalSignsAnnotator(BaseAnnotator):
         return True  # Default to normal if unknown
 ```
 
-This example demonstrates all the best practices for creating robust, configurable, and well-tested custom annotators for PyCTAKES.
+This example demonstrates all the best practices for creating robust, configurable, and well-tested custom annotators for pyCTAKES.
