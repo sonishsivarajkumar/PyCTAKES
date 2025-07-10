@@ -1,4 +1,4 @@
-# pyCTAKES 🏥
+# pyCTAKES
 ## Open Source Python-native Clinical NLP Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -8,19 +8,19 @@
 [![GitHub forks](https://img.shields.io/github/forks/sonishsivarajkumar/PyCTAKES)](https://github.com/sonishsivarajkumar/PyCTAKES/network)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sonishsivarajkumar/PyCTAKES/blob/main/CONTRIBUTING.md)
 
-> **🚀 A modern, open source clinical NLP framework** that mirrors and extends Apache cTAKES functionality in pure Python. Drop-in replacement with superior usability, extensibility, and performance.
+> **A modern, open source clinical NLP framework** that mirrors and extends Apache cTAKES functionality in pure Python. Drop-in replacement with superior usability, extensibility, and performance.
 
 **pyCTAKES** transforms clinical text processing by providing a **100% open source**, Python-native alternative to Apache cTAKES. Built by the community, for the community - no vendor lock-in, no licensing fees, just powerful clinical NLP tools that anyone can use, modify, and contribute to.
 
 ---
 
-## 🌟 Why Choose pyCTAKES?
+## Why Choose pyCTAKES?
 
 <table>
 <tr>
 <td>
 
-### 🔓 **Fully Open Source**
+### **Fully Open Source**
 - **MIT License** - Free for commercial & research use
 - **Transparent development** - All code, issues, and discussions public
 - **Community-driven** - Shaped by real user needs
@@ -29,7 +29,7 @@
 </td>
 <td>
 
-### ⚡ **Modern & Fast**
+### **Modern & Fast**
 - **Pure Python** - No Java dependencies
 - **pip installable** - Get started in seconds
 - **Multiple backends** - spaCy, Stanza, rule-based
@@ -40,7 +40,7 @@
 <tr>
 <td>
 
-### 🏥 **Clinical-First Design**
+### **Clinical-First Design**
 - **Medical expertise built-in** - Clinical abbreviations, sections, terminology
 - **cTAKES compatibility** - Drop-in replacement for existing workflows
 - **Comprehensive NLP** - Tokenization → UMLS mapping
@@ -49,7 +49,7 @@
 </td>
 <td>
 
-### 🔧 **Developer Friendly**
+### **Developer Friendly**
 - **Clean Python APIs** - Intuitive and well-documented
 - **Modular architecture** - Use only what you need
 - **Extensible framework** - Easy to add custom annotators
@@ -296,7 +296,7 @@ furnished to do so, subject to the following conditions:
 If you use PyCTAKES in your research, please cite:
 
 ```bibtex
-@software{pyctakes2025,
+@software{pytakes2025,
   title={PyCTAKES: Open Source Python-native Clinical NLP Framework},
   author={Sivarajkumar, Sonish and Contributors},
   year={2025},
